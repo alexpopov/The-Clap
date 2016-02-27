@@ -1,0 +1,6 @@
+version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
+options: "9327058d55781699dbb3e35abdcdc190"
+build_time: [509930263, 529093000]
+inputs:
+  "/Users/alexpopov/Documents/Projects/Xcode/2016/nwHacks/The Clap/The Clap/AppDelegate.swift": [509930260, 0]
+  "/Users/alexpopov/Documents/Projects/Xcode/2016/nwHacks/The Clap/The Clap/ViewController.swift": [509930260, 0]
