@@ -14,6 +14,7 @@ class TournamentDetailsController: BaseViewController {
   var tournamentDetails: TournamentDetails? {
     didSet {
       tableView.reloadData()
+      didLoadTournamentDetails()
     }
   }
   let headerView = TournamentHeaderView()
@@ -61,6 +62,13 @@ class TournamentDetailsController: BaseViewController {
     tableView.delegate = self
     tableView.dataSource = self
     tableView.registerClass(TeamCell.self, forCellReuseIdentifier: reuseIdentifier)
+  }
+
+  func didLoadTournamentDetails() {
+    guard let details = tournamentDetails else {
+      return
+    }
+
   }
 
 }
