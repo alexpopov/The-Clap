@@ -61,11 +61,11 @@ object DataFetcher extends NumBitDataLayer {
         val toReturn = filter match {
           case "-1" =>
             fetchAllTournaments.filter(tour => appearsIn.contains(tour.id)).filter(
-              tour => tour.date < System.currentTimeMillis())
+              tour => tour.date < System.currentTimeMillis()/1000)
           case "0" => fetchAllTournaments.filter(tour => !appearsIn.contains(tour.id)).filter(
-            tour => tour.date >= System.currentTimeMillis())
+            tour => tour.date >= System.currentTimeMillis()/1000)
           case "1" => fetchAllTournaments.filter(tour => appearsIn.contains(tour.id)).filter(
-            tour => tour.date >= System.currentTimeMillis())
+            tour => tour.date >= System.currentTimeMillis()/1000)
           case _ => fetchAllTournaments
         }
         toReturn
