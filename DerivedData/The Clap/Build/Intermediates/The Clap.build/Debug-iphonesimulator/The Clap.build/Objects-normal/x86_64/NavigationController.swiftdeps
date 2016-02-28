@@ -1,0 +1,289 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "NavigationController"
+provides-nominal:
+- "C8The_Clap20NavigationController"
+provides-member:
+- ["C8The_Clap20NavigationController", ""]
+provides-dynamic-lookup:
+- "viewDidLoad"
+- "didReceiveMemoryWarning"
+depends-top-level:
+- !private "StringLiteralType"
+- "UINavigationController"
+- !private "BooleanLiteralType"
+- !private "UIImage"
+- !private "Colour"
+- "NavigationController"
+depends-member:
+- !private ["PSs9AnyObject", "Colour"]
+- !private ["PSs9AnyObject", "UIImage"]
+- !private ["PSs9AnyObject", "clipsToBounds"]
+- ["PSs9AnyObject", "didReceiveMemoryWarning"]
+- ["PSs9AnyObject", "init"]
+- !private ["PSs9AnyObject", "navigationBar"]
+- !private ["PSs9AnyObject", "setBackgroundImage"]
+- !private ["PSs9AnyObject", "tintColor"]
+- !private ["PSs9AnyObject", "translucent"]
+- ["PSs9AnyObject", "viewDidLoad"]
+- ["PSs9AnyObject", ""]
+- !private ["PSs11CVarArgType", "Colour"]
+- !private ["PSs11CVarArgType", "UIImage"]
+- !private ["PSs11CVarArgType", "clipsToBounds"]
+- ["PSs11CVarArgType", "didReceiveMemoryWarning"]
+- ["PSs11CVarArgType", "init"]
+- !private ["PSs11CVarArgType", "navigationBar"]
+- !private ["PSs11CVarArgType", "setBackgroundImage"]
+- !private ["PSs11CVarArgType", "tintColor"]
+- !private ["PSs11CVarArgType", "translucent"]
+- ["PSs11CVarArgType", "viewDidLoad"]
+- ["PSs11CVarArgType", ""]
+- !private ["O8The_Clap6Colour", "White"]
+- !private ["O8The_Clap6Colour", "color"]
+- !private ["PSs23CustomStringConvertible", "Colour"]
+- !private ["PSs23CustomStringConvertible", "UIImage"]
+- !private ["PSs23CustomStringConvertible", "clipsToBounds"]
+- ["PSs23CustomStringConvertible", "didReceiveMemoryWarning"]
+- ["PSs23CustomStringConvertible", "init"]
+- !private ["PSs23CustomStringConvertible", "navigationBar"]
+- !private ["PSs23CustomStringConvertible", "setBackgroundImage"]
+- !private ["PSs23CustomStringConvertible", "tintColor"]
+- !private ["PSs23CustomStringConvertible", "translucent"]
+- ["PSs23CustomStringConvertible", "viewDidLoad"]
+- ["PSs23CustomStringConvertible", ""]
+- !private ["PSs9Equatable", "Colour"]
+- !private ["PSs9Equatable", "Default"]
+- !private ["PSs9Equatable", "UIImage"]
+- !private ["PSs9Equatable", "White"]
+- !private ["PSs9Equatable", "clipsToBounds"]
+- !private ["PSs9Equatable", "color"]
+- ["PSs9Equatable", "didReceiveMemoryWarning"]
+- ["PSs9Equatable", "init"]
+- !private ["PSs9Equatable", "navigationBar"]
+- !private ["PSs9Equatable", "setBackgroundImage"]
+- !private ["PSs9Equatable", "tintColor"]
+- !private ["PSs9Equatable", "translucent"]
+- ["PSs9Equatable", "viewDidLoad"]
+- ["PSs9Equatable", ""]
+- !private ["PSs8Hashable", "Colour"]
+- !private ["PSs8Hashable", "Default"]
+- !private ["PSs8Hashable", "UIImage"]
+- !private ["PSs8Hashable", "White"]
+- !private ["PSs8Hashable", "clipsToBounds"]
+- !private ["PSs8Hashable", "color"]
+- ["PSs8Hashable", "didReceiveMemoryWarning"]
+- ["PSs8Hashable", "init"]
+- !private ["PSs8Hashable", "navigationBar"]
+- !private ["PSs8Hashable", "setBackgroundImage"]
+- !private ["PSs8Hashable", "tintColor"]
+- !private ["PSs8Hashable", "translucent"]
+- ["PSs8Hashable", "viewDidLoad"]
+- ["PSs8Hashable", ""]
+- !private ["PSo8NSCoding", "Colour"]
+- !private ["PSo8NSCoding", "UIImage"]
+- !private ["PSo8NSCoding", "clipsToBounds"]
+- ["PSo8NSCoding", "didReceiveMemoryWarning"]
+- ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "navigationBar"]
+- !private ["PSo8NSCoding", "setBackgroundImage"]
+- !private ["PSo8NSCoding", "tintColor"]
+- !private ["PSo8NSCoding", "translucent"]
+- ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo26NSExtensionRequestHandling", "Colour"]
+- !private ["PSo26NSExtensionRequestHandling", "UIImage"]
+- ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
+- ["PSo26NSExtensionRequestHandling", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "navigationBar"]
+- ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- !private ["CSo8NSObject", "Colour"]
+- !private ["CSo8NSObject", "UIImage"]
+- !private ["CSo8NSObject", "clipsToBounds"]
+- ["CSo8NSObject", "didReceiveMemoryWarning"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "navigationBar"]
+- !private ["CSo8NSObject", "setBackgroundImage"]
+- !private ["CSo8NSObject", "tintColor"]
+- !private ["CSo8NSObject", "translucent"]
+- ["CSo8NSObject", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "Colour"]
+- !private ["PSo16NSObjectProtocol", "UIImage"]
+- !private ["PSo16NSObjectProtocol", "clipsToBounds"]
+- ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "navigationBar"]
+- !private ["PSo16NSObjectProtocol", "setBackgroundImage"]
+- !private ["PSo16NSObjectProtocol", "tintColor"]
+- !private ["PSo16NSObjectProtocol", "translucent"]
+- ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["C8The_Clap20NavigationController", "Colour"]
+- !private ["C8The_Clap20NavigationController", "UIImage"]
+- ["C8The_Clap20NavigationController", "deinit"]
+- ["C8The_Clap20NavigationController", "didReceiveMemoryWarning"]
+- ["C8The_Clap20NavigationController", "init"]
+- !private ["C8The_Clap20NavigationController", "navigationBar"]
+- ["C8The_Clap20NavigationController", "viewDidLoad"]
+- !private ["PSs16RawRepresentable", "Default"]
+- !private ["PSs16RawRepresentable", "White"]
+- !private ["PSs16RawRepresentable", "color"]
+- !private ["PSo29UIAccessibilityIdentification", "clipsToBounds"]
+- !private ["PSo29UIAccessibilityIdentification", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "setBackgroundImage"]
+- !private ["PSo29UIAccessibilityIdentification", "tintColor"]
+- !private ["PSo29UIAccessibilityIdentification", "translucent"]
+- !private ["PSo12UIAppearance", "clipsToBounds"]
+- !private ["PSo12UIAppearance", "setBackgroundImage"]
+- !private ["PSo12UIAppearance", "tintColor"]
+- !private ["PSo12UIAppearance", "translucent"]
+- !private ["PSo21UIAppearanceContainer", "Colour"]
+- !private ["PSo21UIAppearanceContainer", "UIImage"]
+- !private ["PSo21UIAppearanceContainer", "clipsToBounds"]
+- ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
+- ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "navigationBar"]
+- !private ["PSo21UIAppearanceContainer", "setBackgroundImage"]
+- !private ["PSo21UIAppearanceContainer", "tintColor"]
+- !private ["PSo21UIAppearanceContainer", "translucent"]
+- ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["OSC12UIBarMetrics", "Default"]
+- !private ["PSo16UIBarPositioning", "clipsToBounds"]
+- !private ["PSo16UIBarPositioning", "setBackgroundImage"]
+- !private ["PSo16UIBarPositioning", "tintColor"]
+- !private ["PSo16UIBarPositioning", "translucent"]
+- !private ["PSo18UIContentContainer", "Colour"]
+- !private ["PSo18UIContentContainer", "UIImage"]
+- ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
+- ["PSo18UIContentContainer", "init"]
+- !private ["PSo18UIContentContainer", "navigationBar"]
+- ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- !private ["PSo17UICoordinateSpace", "clipsToBounds"]
+- !private ["PSo17UICoordinateSpace", "setBackgroundImage"]
+- !private ["PSo17UICoordinateSpace", "tintColor"]
+- !private ["PSo17UICoordinateSpace", "translucent"]
+- !private ["PSo13UIDynamicItem", "clipsToBounds"]
+- !private ["PSo13UIDynamicItem", "setBackgroundImage"]
+- !private ["PSo13UIDynamicItem", "tintColor"]
+- !private ["PSo13UIDynamicItem", "translucent"]
+- !private ["PSo18UIFocusEnvironment", "Colour"]
+- !private ["PSo18UIFocusEnvironment", "UIImage"]
+- !private ["PSo18UIFocusEnvironment", "clipsToBounds"]
+- ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
+- ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "navigationBar"]
+- !private ["PSo18UIFocusEnvironment", "setBackgroundImage"]
+- !private ["PSo18UIFocusEnvironment", "tintColor"]
+- !private ["PSo18UIFocusEnvironment", "translucent"]
+- ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["CSo7UIImage", "init"]
+- !private ["CSo15UINavigationBar", "clipsToBounds"]
+- !private ["CSo15UINavigationBar", "setBackgroundImage"]
+- !private ["CSo15UINavigationBar", "tintColor"]
+- !private ["CSo15UINavigationBar", "translucent"]
+- !private ["CSo22UINavigationController", "Colour"]
+- !private ["CSo22UINavigationController", "UIImage"]
+- ["CSo22UINavigationController", "didReceiveMemoryWarning"]
+- ["CSo22UINavigationController", "init"]
+- !private ["CSo22UINavigationController", "navigationBar"]
+- ["CSo22UINavigationController", "viewDidLoad"]
+- ["CSo22UINavigationController", ""]
+- !private ["CSo11UIResponder", "Colour"]
+- !private ["CSo11UIResponder", "UIImage"]
+- !private ["CSo11UIResponder", "clipsToBounds"]
+- ["CSo11UIResponder", "didReceiveMemoryWarning"]
+- ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "navigationBar"]
+- !private ["CSo11UIResponder", "setBackgroundImage"]
+- !private ["CSo11UIResponder", "tintColor"]
+- !private ["CSo11UIResponder", "translucent"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- !private ["PSo16UIStateRestoring", "Colour"]
+- !private ["PSo16UIStateRestoring", "UIImage"]
+- ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
+- ["PSo16UIStateRestoring", "init"]
+- !private ["PSo16UIStateRestoring", "navigationBar"]
+- ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["PSo18UITraitEnvironment", "Colour"]
+- !private ["PSo18UITraitEnvironment", "UIImage"]
+- !private ["PSo18UITraitEnvironment", "clipsToBounds"]
+- ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
+- ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "navigationBar"]
+- !private ["PSo18UITraitEnvironment", "setBackgroundImage"]
+- !private ["PSo18UITraitEnvironment", "tintColor"]
+- !private ["PSo18UITraitEnvironment", "translucent"]
+- ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "clipsToBounds"]
+- !private ["CSo6UIView", "setBackgroundImage"]
+- !private ["CSo6UIView", "tintColor"]
+- !private ["CSo6UIView", "translucent"]
+- !private ["CSo16UIViewController", "Colour"]
+- !private ["CSo16UIViewController", "UIImage"]
+- ["CSo16UIViewController", "didReceiveMemoryWarning"]
+- ["CSo16UIViewController", "init"]
+- !private ["CSo16UIViewController", "navigationBar"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- !private ["PSs24_ImageLiteralConvertible", "init"]
+- !private ["PSs12_Reflectable", "clipsToBounds"]
+- !private ["PSs12_Reflectable", "setBackgroundImage"]
+- !private ["PSs12_Reflectable", "tintColor"]
+- !private ["PSs12_Reflectable", "translucent"]
+depends-nominal:
+- "PSs9AnyObject"
+- "PSs11CVarArgType"
+- !private "O8The_Clap6Colour"
+- "PSs23CustomStringConvertible"
+- "PSs9Equatable"
+- "PSs8Hashable"
+- "PSo8NSCoding"
+- "PSo26NSExtensionRequestHandling"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- "C8The_Clap20NavigationController"
+- !private "PSs16RawRepresentable"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- !private "OSC12UIBarMetrics"
+- !private "PSo16UIBarPositioning"
+- "PSo18UIContentContainer"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- !private "CSo7UIImage"
+- !private "CSo15UINavigationBar"
+- "CSo22UINavigationController"
+- "CSo11UIResponder"
+- "PSo16UIStateRestoring"
+- "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- !private "PSs24_ImageLiteralConvertible"
+- !private "PSs12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Users/alexpopov/Documents/Projects/Xcode/2016/nwHacks/The Clap/Carthage/Build/iOS/Prelude.framework/Modules/Prelude.swiftmodule/x86_64.swiftmodule"
+- "/Users/alexpopov/Documents/Projects/Xcode/2016/nwHacks/The Clap/Carthage/Build/iOS/Prelude.framework/Headers/Prelude-Swift.h"
+- "/Users/alexpopov/Documents/Projects/Xcode/2016/nwHacks/The Clap/Carthage/Build/iOS/Prelude.framework/Headers/Prelude.h"
+- "/Users/alexpopov/Documents/Projects/Xcode/2016/nwHacks/The Clap/Carthage/Build/iOS/Prelude.framework/Modules/module.modulemap"
+- "/Users/alexpopov/Documents/Projects/Xcode/2016/nwHacks/The Clap/Carthage/Build/iOS/HEXColor.framework/Modules/HEXColor.swiftmodule/x86_64.swiftmodule"
+- "/Users/alexpopov/Documents/Projects/Xcode/2016/nwHacks/The Clap/Carthage/Build/iOS/HEXColor.framework/Headers/HEXColor-Swift.h"
+- "/Users/alexpopov/Documents/Projects/Xcode/2016/nwHacks/The Clap/Carthage/Build/iOS/HEXColor.framework/Headers/HEXColor.h"
+- "/Users/alexpopov/Documents/Projects/Xcode/2016/nwHacks/The Clap/Carthage/Build/iOS/HEXColor.framework/Modules/module.modulemap"
+interface-hash: "c498d75c1f95ba6d676b6012f35fb16f"

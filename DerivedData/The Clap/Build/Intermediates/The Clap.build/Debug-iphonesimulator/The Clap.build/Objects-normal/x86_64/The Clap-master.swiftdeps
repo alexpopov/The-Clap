@@ -1,6 +1,11 @@
 version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
-options: "9327058d55781699dbb3e35abdcdc190"
-build_time: [509930263, 529093000]
+options: "0c070d12303a684c737754f96295d627"
+build_time: [509939073, 847750000]
 inputs:
-  "/Users/alexpopov/Documents/Projects/Xcode/2016/nwHacks/The Clap/The Clap/AppDelegate.swift": [509930260, 0]
-  "/Users/alexpopov/Documents/Projects/Xcode/2016/nwHacks/The Clap/The Clap/ViewController.swift": [509930260, 0]
+  "/Users/alexpopov/Documents/Projects/Xcode/2016/nwHacks/The Clap/The Clap/ViewController.swift": [509930363, 0]
+  "/Users/alexpopov/Documents/Projects/Xcode/2016/nwHacks/The Clap/The Clap/Constants.swift": [509935481, 0]
+  "/Users/alexpopov/Documents/Projects/Xcode/2016/nwHacks/The Clap/The Clap/Manuscript.swift": [508800116, 0]
+  "/Users/alexpopov/Documents/Projects/Xcode/2016/nwHacks/The Clap/The Clap/NavigationController.swift": [509939008, 0]
+  "/Users/alexpopov/Documents/Projects/Xcode/2016/nwHacks/The Clap/The Clap/LayoutProxy.swift": [508800116, 0]
+  "/Users/alexpopov/Documents/Projects/Xcode/2016/nwHacks/The Clap/The Clap/AppDelegate.swift": [509932118, 0]
+  "/Users/alexpopov/Documents/Projects/Xcode/2016/nwHacks/The Clap/The Clap/TabBarController.swift": [509938991, 0]

@@ -1,0 +1,232 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ManuscriptUtils"
+- "Manuscript"
+provides-nominal:
+- "P8The_Clap15ManuscriptUtils"
+- "V8The_Clap10Manuscript"
+- "VV8The_Clap10Manuscript5Utils"
+provides-member:
+- ["P8The_Clap15ManuscriptUtils", ""]
+- ["V8The_Clap10Manuscript", ""]
+- ["VV8The_Clap10Manuscript5Utils", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "=="
+- "AnySequence"
+- !private "anyGenerator"
+- !private ">"
+- "ManuscriptUtils"
+- !private "UIScreen"
+- !private "NSSet"
+- "UIView"
+- "Bool"
+- "Manuscript"
+- !private "AnyGenerator"
+- !private "Array"
+depends-member:
+- !private ["CSs12AnyGenerator", "Element"]
+- !private ["PSs9AnyObject", "Element"]
+- !private ["PSs9AnyObject", "containsObject"]
+- !private ["PSs9AnyObject", "init"]
+- !private ["PSs9AnyObject", "mainScreen"]
+- !private ["PSs9AnyObject", "scale"]
+- !private ["PSs9AnyObject", "superview"]
+- !private ["VSs11AnySequence", "Generator"]
+- !private ["VSs11AnySequence", "init"]
+- !private ["Sa", "init"]
+- !private ["PSs23ArrayLiteralConvertible", "containsObject"]
+- !private ["PSs23ArrayLiteralConvertible", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["PSs25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["PSs11BooleanType", "_getBuiltinLogicValue"]
+- !private ["V12CoreGraphics7CGFloat", "deinit"]
+- !private ["PSs11CVarArgType", "containsObject"]
+- !private ["PSs11CVarArgType", "init"]
+- !private ["PSs11CVarArgType", "mainScreen"]
+- !private ["PSs11CVarArgType", "scale"]
+- !private ["PSs11CVarArgType", "superview"]
+- !private ["PSs14CollectionType", "init"]
+- ["PSs28CustomDebugStringConvertible", "Some"]
+- !private ["PSs28CustomDebugStringConvertible", "init"]
+- !private ["PSs23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["PSs23CustomStringConvertible", "containsObject"]
+- !private ["PSs23CustomStringConvertible", "init"]
+- !private ["PSs23CustomStringConvertible", "mainScreen"]
+- !private ["PSs23CustomStringConvertible", "scale"]
+- !private ["PSs23CustomStringConvertible", "superview"]
+- !private ["PSs9Equatable", "_getBuiltinLogicValue"]
+- !private ["PSs9Equatable", "containsObject"]
+- !private ["PSs9Equatable", "init"]
+- !private ["PSs9Equatable", "mainScreen"]
+- !private ["PSs9Equatable", "scale"]
+- !private ["PSs9Equatable", "superview"]
+- !private ["PSs13GeneratorType", "Element"]
+- !private ["PSs8Hashable", "_getBuiltinLogicValue"]
+- !private ["PSs8Hashable", "containsObject"]
+- !private ["PSs8Hashable", "init"]
+- !private ["PSs8Hashable", "mainScreen"]
+- !private ["PSs8Hashable", "scale"]
+- !private ["PSs8Hashable", "superview"]
+- !private ["PSs9Indexable", "init"]
+- !private ["CV8The_Clap10Manuscript11LayoutProxy", "init"]
+- !private ["V8The_Clap10Manuscript", "AnyGenerator"]
+- ["V8The_Clap10Manuscript", "AnySequence"]
+- !private ["V8The_Clap10Manuscript", "Array"]
+- ["V8The_Clap10Manuscript", "Bool"]
+- ["V8The_Clap10Manuscript", "LayoutProxy"]
+- ["V8The_Clap10Manuscript", "Manuscript"]
+- ["V8The_Clap10Manuscript", "ManuscriptUtils"]
+- !private ["V8The_Clap10Manuscript", "NSSet"]
+- !private ["V8The_Clap10Manuscript", "UIScreen"]
+- ["V8The_Clap10Manuscript", "UIView"]
+- ["V8The_Clap10Manuscript", "Utils"]
+- ["V8The_Clap10Manuscript", "ancestors"]
+- !private ["V8The_Clap10Manuscript", "anyGenerator"]
+- ["V8The_Clap10Manuscript", "findCommonSuperview"]
+- ["V8The_Clap10Manuscript", "init"]
+- ["V8The_Clap10Manuscript", "layout"]
+- ["V8The_Clap10Manuscript", "makeLayout"]
+- ["P8The_Clap15ManuscriptUtils", "Bool"]
+- !private ["P8The_Clap15ManuscriptUtils", "UIScreen"]
+- ["P8The_Clap15ManuscriptUtils", "init"]
+- ["P8The_Clap15ManuscriptUtils", "isRetina"]
+- ["P8The_Clap15ManuscriptUtils", ""]
+- !private ["PSs21MutableCollectionType", "init"]
+- !private ["PSs16MutableIndexable", "init"]
+- !private ["PSs16MutableSliceable", "init"]
+- !private ["PSo8NSCoding", "containsObject"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "superview"]
+- !private ["PSo9NSCopying", "containsObject"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo17NSFastEnumeration", "containsObject"]
+- !private ["PSo17NSFastEnumeration", "init"]
+- !private ["PSo16NSMutableCopying", "containsObject"]
+- !private ["PSo16NSMutableCopying", "init"]
+- !private ["CSo8NSObject", "containsObject"]
+- !private ["CSo8NSObject", "deinit"]
+- !private ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "mainScreen"]
+- !private ["CSo8NSObject", "scale"]
+- !private ["CSo8NSObject", "superview"]
+- !private ["PSo16NSObjectProtocol", "containsObject"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "mainScreen"]
+- !private ["PSo16NSObjectProtocol", "scale"]
+- !private ["PSo16NSObjectProtocol", "superview"]
+- !private ["PSo14NSSecureCoding", "containsObject"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo5NSSet", "containsObject"]
+- !private ["CSo5NSSet", "init"]
+- ["PSs21NilLiteralConvertible", "Some"]
+- ["Sq", "Some"]
+- !private ["Sq", "deinit"]
+- !private ["PSs30RangeReplaceableCollectionType", "init"]
+- !private ["PSs12SequenceType", "Element"]
+- !private ["PSs12SequenceType", "Generator"]
+- !private ["PSs12SequenceType", "containsObject"]
+- !private ["PSs12SequenceType", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "superview"]
+- !private ["PSo12UIAppearance", "superview"]
+- !private ["PSo21UIAppearanceContainer", "superview"]
+- !private ["PSo17UICoordinateSpace", "superview"]
+- !private ["PSo13UIDynamicItem", "superview"]
+- !private ["PSo18UIFocusEnvironment", "superview"]
+- !private ["CSo11UIResponder", "deinit"]
+- !private ["CSo11UIResponder", "superview"]
+- !private ["CSo8UIScreen", "mainScreen"]
+- !private ["CSo8UIScreen", "scale"]
+- !private ["PSo18UITraitEnvironment", "mainScreen"]
+- !private ["PSo18UITraitEnvironment", "scale"]
+- !private ["PSo18UITraitEnvironment", "superview"]
+- !private ["CSo6UIView", "deinit"]
+- !private ["CSo6UIView", "superview"]
+- ["VV8The_Clap10Manuscript5Utils", "Bool"]
+- !private ["VV8The_Clap10Manuscript5Utils", "UIScreen"]
+- ["VV8The_Clap10Manuscript5Utils", "deinit"]
+- ["VV8The_Clap10Manuscript5Utils", "init"]
+- ["VV8The_Clap10Manuscript5Utils", "isRetina"]
+- !private ["CSs17_AnyGeneratorBase", "Element"]
+- !private ["PSs10_ArrayType", "init"]
+- !private ["PSs33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["PSs24_DestructorSafeContainer", "init"]
+- !private ["PSs21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["PSs21_ObjectiveCBridgeable", "init"]
+- ["PSs12_Reflectable", "Some"]
+- !private ["PSs12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["PSs12_Reflectable", "containsObject"]
+- !private ["PSs12_Reflectable", "init"]
+- !private ["PSs12_Reflectable", "superview"]
+depends-nominal:
+- !private "CSs12AnyGenerator"
+- !private "PSs9AnyObject"
+- !private "VSs11AnySequence"
+- !private "Sa"
+- !private "PSs23ArrayLiteralConvertible"
+- !private "Sb"
+- !private "PSs25BooleanLiteralConvertible"
+- !private "PSs11BooleanType"
+- !private "V12CoreGraphics7CGFloat"
+- !private "PSs11CVarArgType"
+- !private "PSs14CollectionType"
+- "PSs28CustomDebugStringConvertible"
+- !private "PSs23CustomStringConvertible"
+- !private "PSs9Equatable"
+- !private "PSs13GeneratorType"
+- !private "PSs8Hashable"
+- !private "PSs9Indexable"
+- !private "CV8The_Clap10Manuscript11LayoutProxy"
+- "V8The_Clap10Manuscript"
+- "P8The_Clap15ManuscriptUtils"
+- !private "PSs21MutableCollectionType"
+- !private "PSs16MutableIndexable"
+- !private "PSs16MutableSliceable"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "PSo17NSFastEnumeration"
+- !private "PSo16NSMutableCopying"
+- !private "CSo8NSObject"
+- !private "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo5NSSet"
+- "PSs21NilLiteralConvertible"
+- "Sq"
+- !private "PSs30RangeReplaceableCollectionType"
+- !private "PSs12SequenceType"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- !private "PSo21UIAppearanceContainer"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- !private "PSo18UIFocusEnvironment"
+- !private "CSo11UIResponder"
+- !private "CSo8UIScreen"
+- !private "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "VV8The_Clap10Manuscript5Utils"
+- !private "CSs17_AnyGeneratorBase"
+- !private "PSs10_ArrayType"
+- !private "PSs33_BuiltinBooleanLiteralConvertible"
+- !private "PSs24_DestructorSafeContainer"
+- !private "PSs21_ObjectiveCBridgeable"
+- "PSs12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Users/alexpopov/Documents/Projects/Xcode/2016/nwHacks/The Clap/Carthage/Build/iOS/Prelude.framework/Modules/Prelude.swiftmodule/arm64.swiftmodule"
+- "/Users/alexpopov/Documents/Projects/Xcode/2016/nwHacks/The Clap/Carthage/Build/iOS/Prelude.framework/Headers/Prelude-Swift.h"
+- "/Users/alexpopov/Documents/Projects/Xcode/2016/nwHacks/The Clap/Carthage/Build/iOS/Prelude.framework/Headers/Prelude.h"
+- "/Users/alexpopov/Documents/Projects/Xcode/2016/nwHacks/The Clap/Carthage/Build/iOS/Prelude.framework/Modules/module.modulemap"
+- "/Users/alexpopov/Documents/Projects/Xcode/2016/nwHacks/The Clap/Carthage/Build/iOS/HEXColor.framework/Modules/HEXColor.swiftmodule/arm64.swiftmodule"
+- "/Users/alexpopov/Documents/Projects/Xcode/2016/nwHacks/The Clap/Carthage/Build/iOS/HEXColor.framework/Headers/HEXColor-Swift.h"
+- "/Users/alexpopov/Documents/Projects/Xcode/2016/nwHacks/The Clap/Carthage/Build/iOS/HEXColor.framework/Headers/HEXColor.h"
+- "/Users/alexpopov/Documents/Projects/Xcode/2016/nwHacks/The Clap/Carthage/Build/iOS/HEXColor.framework/Modules/module.modulemap"
+interface-hash: "0746bcf66b7e6d63498f4867e43ec286"

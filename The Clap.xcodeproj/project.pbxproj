@@ -12,6 +12,15 @@
 		B09D0D081C82661400ADB3BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B09D0D061C82661400ADB3BF /* Main.storyboard */; };
 		B09D0D0A1C82661400ADB3BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B09D0D091C82661400ADB3BF /* Assets.xcassets */; };
 		B09D0D0D1C82661400ADB3BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B09D0D0B1C82661400ADB3BF /* LaunchScreen.storyboard */; };
+		B09D0D151C82685200ADB3BF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D141C82685200ADB3BF /* TabBarController.swift */; };
+		B09D0D191C8269E900ADB3BF /* LayoutProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D171C8269E900ADB3BF /* LayoutProxy.swift */; };
+		B09D0D1A1C8269E900ADB3BF /* Manuscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D181C8269E900ADB3BF /* Manuscript.swift */; };
+		B09D0D1E1C826AD400ADB3BF /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B09D0D1B1C826AD400ADB3BF /* BrightFutures.framework */; };
+		B09D0D1F1C826AD400ADB3BF /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B09D0D1C1C826AD400ADB3BF /* Prelude.framework */; };
+		B09D0D201C826AD400ADB3BF /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B09D0D1D1C826AD400ADB3BF /* Result.framework */; };
+		B09D0D261C826EDA00ADB3BF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D251C826EDA00ADB3BF /* Constants.swift */; };
+		B09D0D281C82729B00ADB3BF /* HEXColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B09D0D271C82729B00ADB3BF /* HEXColor.framework */; };
+		B09D0D2B1C82878B00ADB3BF /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D2A1C82878B00ADB3BF /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +31,15 @@
 		B09D0D091C82661400ADB3BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B09D0D0C1C82661400ADB3BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B09D0D0E1C82661400ADB3BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B09D0D141C82685200ADB3BF /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		B09D0D171C8269E900ADB3BF /* LayoutProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutProxy.swift; sourceTree = "<group>"; };
+		B09D0D181C8269E900ADB3BF /* Manuscript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manuscript.swift; sourceTree = "<group>"; };
+		B09D0D1B1C826AD400ADB3BF /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BrightFutures.framework; path = Carthage/Build/iOS/BrightFutures.framework; sourceTree = "<group>"; };
+		B09D0D1C1C826AD400ADB3BF /* Prelude.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Prelude.framework; path = Carthage/Build/iOS/Prelude.framework; sourceTree = "<group>"; };
+		B09D0D1D1C826AD400ADB3BF /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		B09D0D251C826EDA00ADB3BF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B09D0D271C82729B00ADB3BF /* HEXColor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HEXColor.framework; path = Carthage/Build/iOS/HEXColor.framework; sourceTree = "<group>"; };
+		B09D0D2A1C82878B00ADB3BF /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +47,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B09D0D1E1C826AD400ADB3BF /* BrightFutures.framework in Frameworks */,
+				B09D0D1F1C826AD400ADB3BF /* Prelude.framework in Frameworks */,
+				B09D0D201C826AD400ADB3BF /* Result.framework in Frameworks */,
+				B09D0D281C82729B00ADB3BF /* HEXColor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,13 +77,31 @@
 			isa = PBXGroup;
 			children = (
 				B09D0D021C82661400ADB3BF /* AppDelegate.swift */,
+				B09D0D141C82685200ADB3BF /* TabBarController.swift */,
+				B09D0D251C826EDA00ADB3BF /* Constants.swift */,
 				B09D0D041C82661400ADB3BF /* ViewController.swift */,
 				B09D0D061C82661400ADB3BF /* Main.storyboard */,
 				B09D0D091C82661400ADB3BF /* Assets.xcassets */,
+				B09D0D2A1C82878B00ADB3BF /* NavigationController.swift */,
 				B09D0D0B1C82661400ADB3BF /* LaunchScreen.storyboard */,
+				B09D0D171C8269E900ADB3BF /* LayoutProxy.swift */,
+				B09D0D181C8269E900ADB3BF /* Manuscript.swift */,
 				B09D0D0E1C82661400ADB3BF /* Info.plist */,
+				B09D0D291C82804100ADB3BF /* Frameworks */,
 			);
 			path = "The Clap";
+			sourceTree = "<group>";
+		};
+		B09D0D291C82804100ADB3BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B09D0D271C82729B00ADB3BF /* HEXColor.framework */,
+				B09D0D1B1C826AD400ADB3BF /* BrightFutures.framework */,
+				B09D0D1C1C826AD400ADB3BF /* Prelude.framework */,
+				B09D0D1D1C826AD400ADB3BF /* Result.framework */,
+			);
+			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +114,7 @@
 				B09D0CFB1C82661400ADB3BF /* Sources */,
 				B09D0CFC1C82661400ADB3BF /* Frameworks */,
 				B09D0CFD1C82661400ADB3BF /* Resources */,
+				B09D0D161C82693600ADB3BF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -130,13 +171,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B09D0D161C82693600ADB3BF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/BrightFutures.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Prelude.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/HEXColor.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B09D0CFB1C82661400ADB3BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B09D0D191C8269E900ADB3BF /* LayoutProxy.swift in Sources */,
+				B09D0D151C82685200ADB3BF /* TabBarController.swift in Sources */,
 				B09D0D051C82661400ADB3BF /* ViewController.swift in Sources */,
+				B09D0D1A1C8269E900ADB3BF /* Manuscript.swift in Sources */,
 				B09D0D031C82661400ADB3BF /* AppDelegate.swift in Sources */,
+				B09D0D2B1C82878B00ADB3BF /* NavigationController.swift in Sources */,
+				B09D0D261C826EDA00ADB3BF /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +313,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "The Clap/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.numbits.The-Clap";
@@ -258,6 +328,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "The Clap/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.numbits.The-Clap";
