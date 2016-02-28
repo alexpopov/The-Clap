@@ -66,10 +66,7 @@ class Client {
     }
 
     do {
-      guard let json = try NSJSONSerialization.JSONObjectWithData(responseData, options: []) as? AnyObject else {
-        print("JSON was actually: \(NSString(data: responseData, encoding: NSUTF8StringEncoding))")
-        return Result(error: .JSONError)
-      }
+      let json = try NSJSONSerialization.JSONObjectWithData(responseData, options: [])
       return Result(value: json)
     } catch let error {
       print(error)
@@ -85,9 +82,22 @@ class Client {
   }
 
   func getTournaments(filter filter: TournamentFilter) -> Future<[Tournament], ClapError> {
-    let future = startRequest(.Tournaments(userID: 0, filter: .Open))
+    let future = startRequest(.Tournaments(0, .Open))
       .map { $0 as? [JSON] }
       .map { $0?.flatMap { Tournament(json: $0) } ?? [] }
+    return future
+  }
+
+  func getTournamentDetails(tournamentID: TournamentID) -> Future<TournamentDetails, ClapError> {
+    let future = startRequest(.TournamentDetails(tournamentID))
+      .map { $0 as? [JSON] ?? [] }
+      .map { $0.flatMap { TournamentDetails(json: $0) } }
+      .flatMap { (details: TournamentDetails?) -> Future<TournamentDetails, ClapError> in
+        guard let details = details else {
+          return Future(error: ClapError.JSONError)
+        }
+        return Future(value: details)
+    }
     return future
   }
 
@@ -102,10 +112,14 @@ class APIRequest {
   static var baseURL = "http://10.19.219.190:9000/rest/"
 
   enum Request {
-    case Teams, Tournaments(userID: UserID, filter: TournamentFilter)
+    case Teams, Tournaments(UserID, TournamentFilter), TournamentDetails(TournamentID)
     var method: RESTMethod {
       switch self {
-      case Teams, Tournaments:
+      case .Teams:
+        return .Get
+      case .Tournaments(_, _):
+        return .Get
+      case .TournamentDetails(_):
         return .Get
       }
     }
@@ -116,6 +130,8 @@ class APIRequest {
         return "teams"
       case .Tournaments(let userID, let filter):
         return "tournament/\(userID)/\(filter.rawValue)"
+      case .TournamentDetails(let tournamentID):
+        return "tournamentDetails/\(tournamentID)"
       }
     }
   }
@@ -153,6 +169,12 @@ struct Tournament: Keyable {
   var current: Int
   var max: Int
 
+  var formattedDate: String {
+    let formatter = NSDateFormatter()
+    formatter.dateFormat = "ccc LLL d"
+    return formatter.stringFromDate(date)
+  }
+
   var primaryKey: TournamentID {
     return tournamentID
   }
@@ -176,7 +198,19 @@ struct Tournament: Keyable {
   }
 }
 
+struct TournamentDetails {
+
+  var teamPlayers: [TeamPlayers]
+
+//  [{"team":{"id":1,"name":"Cans"},"players":[{"id":1,"u_id":1,"nick":"Cannibal Dolphin"},{"id":2,"u_id":2,"nick":"Cannibal Poro"}]},{"team":{"id":2,"name":"Normies"},"players":[{"id":3,"u_id":1,"nick":"Apopo"},{"id":4,"u_id":2,"nick":"alee"}]}]
+  init?(json: [JSON]) {
+    let teamPlayers = json.flatMap { TeamPlayers(json: $0) }
+    self.teamPlayers = teamPlayers
+  }
+}
+
 typealias JSON = Dictionary<NSObject, AnyObject>
+typealias PlayerID = Int
 
 struct Team {
   var teamID: TeamID
@@ -191,5 +225,38 @@ struct Team {
     self.teamID = teamID
     self.name = name
     self.shortName = "CLG"
+  }
+}
+
+struct Player {
+  var playerID: PlayerID
+  var userID: UserID
+  var nickname: String
+
+  init?(json: JSON) {
+    guard let pID = json["id"] as? Int
+      , let uID = json["u_id"] as? Int
+      , let nick = json["nick"] as? String else {
+        return nil
+    }
+    self.playerID = pID
+    self.userID = uID
+    self.nickname = nick
+  }
+}
+
+struct TeamPlayers {
+  var team: Team
+  var players: [Player]
+
+  init?(json: JSON) {
+    guard let _team = json["team"] as? JSON
+      , let _players = json["players"] as? [JSON]
+      , let team = Team(json: _team) else {
+        return nil
+    }
+    let players = _players.flatMap { Player(json: $0) }
+    self.team = team
+    self.players = players
   }
 }

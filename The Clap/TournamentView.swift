@@ -83,9 +83,7 @@ class TournamentView: BaseView {
   func updateWithTournament(tournament: Tournament) {
     nameLabel.text = tournament.name
     gameLabel.text = tournament.game
-    let formatter = NSDateFormatter()
-    formatter.dateFormat = "ccc LLL d"
-    dateLabel.text = formatter.stringFromDate(tournament.date)
+    dateLabel.text = tournament.formattedDate
     capacityLabel.text = "\(tournament.current)/\(tournament.max) spots filled"
   }
 
