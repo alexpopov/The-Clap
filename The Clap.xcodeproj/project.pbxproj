@@ -32,6 +32,10 @@
 		B09D0D3D1C82AF8300ADB3BF /* TournamentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D3C1C82AF8300ADB3BF /* TournamentCell.swift */; };
 		B09D0D3F1C82B63C00ADB3BF /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D3E1C82B63C00ADB3BF /* API.swift */; };
 		B09D0D411C82B94000ADB3BF /* AudioEngineRESTAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D401C82B94000ADB3BF /* AudioEngineRESTAPI.swift */; };
+		B09D0D451C82C5CE00ADB3BF /* TournamentQuickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D441C82C5CE00ADB3BF /* TournamentQuickView.swift */; };
+		B09D0D471C82C5ED00ADB3BF /* Designable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D461C82C5ED00ADB3BF /* Designable.swift */; };
+		B09D0D491C82C5F800ADB3BF /* TournamentQuickView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B09D0D481C82C5F800ADB3BF /* TournamentQuickView.xib */; };
+		B09D0D4B1C82C66800ADB3BF /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D4A1C82C66800ADB3BF /* Divider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +66,10 @@
 		B09D0D3C1C82AF8300ADB3BF /* TournamentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentCell.swift; sourceTree = "<group>"; };
 		B09D0D3E1C82B63C00ADB3BF /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		B09D0D401C82B94000ADB3BF /* AudioEngineRESTAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioEngineRESTAPI.swift; path = ../../../../../BitLit/BitLit/BitLit/AudioEngineRESTAPI.swift; sourceTree = "<group>"; };
+		B09D0D441C82C5CE00ADB3BF /* TournamentQuickView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentQuickView.swift; sourceTree = "<group>"; };
+		B09D0D461C82C5ED00ADB3BF /* Designable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Designable.swift; sourceTree = "<group>"; };
+		B09D0D481C82C5F800ADB3BF /* TournamentQuickView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TournamentQuickView.xib; sourceTree = "<group>"; };
+		B09D0D4A1C82C66800ADB3BF /* Divider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,8 @@
 		B09D0D011C82661400ADB3BF /* The Clap */ = {
 			isa = PBXGroup;
 			children = (
+				B09D0D441C82C5CE00ADB3BF /* TournamentQuickView.swift */,
+				B09D0D481C82C5F800ADB3BF /* TournamentQuickView.xib */,
 				B09D0D3E1C82B63C00ADB3BF /* API.swift */,
 				B09D0D381C82AC1200ADB3BF /* BaseView.swift */,
 				B09D0D3C1C82AF8300ADB3BF /* TournamentCell.swift */,
@@ -120,6 +130,8 @@
 				B09D0D171C8269E900ADB3BF /* LayoutProxy.swift */,
 				B09D0D181C8269E900ADB3BF /* Manuscript.swift */,
 				B09D0D401C82B94000ADB3BF /* AudioEngineRESTAPI.swift */,
+				B09D0D461C82C5ED00ADB3BF /* Designable.swift */,
+				B09D0D4A1C82C66800ADB3BF /* Divider.swift */,
 				B09D0D0E1C82661400ADB3BF /* Info.plist */,
 				B09D0D291C82804100ADB3BF /* Frameworks */,
 			);
@@ -198,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B09D0D0D1C82661400ADB3BF /* LaunchScreen.storyboard in Resources */,
+				B09D0D491C82C5F800ADB3BF /* TournamentQuickView.xib in Resources */,
 				B09D0D0A1C82661400ADB3BF /* Assets.xcassets in Resources */,
 				B09D0D081C82661400ADB3BF /* Main.storyboard in Resources */,
 			);
@@ -234,9 +247,11 @@
 				B09D0D411C82B94000ADB3BF /* AudioEngineRESTAPI.swift in Sources */,
 				B09D0D331C82913600ADB3BF /* SettingsViewController.swift in Sources */,
 				B09D0D3D1C82AF8300ADB3BF /* TournamentCell.swift in Sources */,
+				B09D0D451C82C5CE00ADB3BF /* TournamentQuickView.swift in Sources */,
 				B09D0D351C829D1E00ADB3BF /* TableView.swift in Sources */,
 				B09D0D371C82AB0C00ADB3BF /* TournamentView.swift in Sources */,
 				B09D0D191C8269E900ADB3BF /* LayoutProxy.swift in Sources */,
+				B09D0D4B1C82C66800ADB3BF /* Divider.swift in Sources */,
 				B09D0D151C82685200ADB3BF /* TabBarController.swift in Sources */,
 				B09D0D311C8290B600ADB3BF /* ProfileViewController.swift in Sources */,
 				B09D0D051C82661400ADB3BF /* ViewController.swift in Sources */,
@@ -246,6 +261,7 @@
 				B09D0D2D1C8288D900ADB3BF /* BaseViewController.swift in Sources */,
 				B09D0D391C82AC1200ADB3BF /* BaseView.swift in Sources */,
 				B09D0D2B1C82878B00ADB3BF /* NavigationController.swift in Sources */,
+				B09D0D471C82C5ED00ADB3BF /* Designable.swift in Sources */,
 				B09D0D3F1C82B63C00ADB3BF /* API.swift in Sources */,
 				B09D0D261C826EDA00ADB3BF /* Constants.swift in Sources */,
 			);

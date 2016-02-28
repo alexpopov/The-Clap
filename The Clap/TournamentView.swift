@@ -15,8 +15,6 @@ class TournamentView: BaseView {
   let dateLabel = UILabel()
   let gameLabel = UILabel()
 
-
-
   static var preferredHeight: CGFloat = 56
 
   override func createUI() {
