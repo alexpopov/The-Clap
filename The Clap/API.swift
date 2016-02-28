@@ -82,7 +82,7 @@ class Client {
   }
 
   func getTournaments(filter filter: TournamentFilter) -> Future<[Tournament], ClapError> {
-    let future = startRequest(.Tournaments(1, filter))
+    let future = startRequest(.Tournaments(userID, filter))
       .map { $0 as? [JSON] }
       .map { $0?.flatMap { Tournament(json: $0) } ?? [] }
     return future
@@ -101,8 +101,22 @@ class Client {
     return future
   }
 
+  func getUpcomingMatch() -> Future<UpcomingMatch, ClapError> {
+    let future = startRequest(.UpcomingMatch(userID))
+      .map { $0 as? JSON ?? JSON() }
+      .map { UpcomingMatch(json: $0) }
+      .flatMap { (match: UpcomingMatch?) -> Future<UpcomingMatch, ClapError> in
+        guard let match = match else {
+          return Future(error: .JSONError)
+        }
+        return Future(value: match)
+    }
 
+    return future
+  }
 }
+
+let userID = 1
 
 enum TournamentFilter: Int {
   case Past = -1, Open = 0, Future = 1
@@ -112,7 +126,7 @@ class APIRequest {
   static var baseURL = "http://10.19.219.190:9000/rest/"
 
   enum Request {
-    case Teams, Tournaments(UserID, TournamentFilter), TournamentDetails(TournamentID)
+    case Teams, Tournaments(UserID, TournamentFilter), TournamentDetails(TournamentID), UpcomingMatch(UserID)
     var method: RESTMethod {
       switch self {
       case .Teams:
@@ -120,6 +134,8 @@ class APIRequest {
       case .Tournaments(_, _):
         return .Get
       case .TournamentDetails(_):
+        return .Get
+      case .UpcomingMatch(_):
         return .Get
       }
     }
@@ -132,6 +148,8 @@ class APIRequest {
         return "tournament/\(userID)/\(filter.rawValue)"
       case .TournamentDetails(let tournamentID):
         return "tournamentDetails/\(tournamentID)"
+      case .UpcomingMatch(let userID):
+        return "upcomingMatch/\(userID)"
       }
     }
   }
@@ -211,6 +229,7 @@ struct TournamentDetails {
 
 typealias JSON = Dictionary<NSObject, AnyObject>
 typealias PlayerID = Int
+typealias MatchID = Int
 
 struct Team {
   var teamID: TeamID
@@ -259,5 +278,81 @@ struct TeamPlayers {
     let players = _players.flatMap { Player(json: $0) }
     self.team = team
     self.players = players
+  }
+}
+
+/*{"tournament":
+      {"id":1,"name":"nwLan","game":"Hackz","date":1456732800000,"current":2,"max":8,"status":1},
+  "match":
+      {"id":1,"tour_id":1,"team1_id":1,"team2_id":2,"ip":"192.168.1.1/32","time":1456646400000,"score1":0,"score2":0,"round":1},
+    "myTeam":
+        {"id":1,"name":"Cans","nick":"CAN"},
+    "otherTeam":
+        {"id":2,"name":"Normies","nick":"NOR"}}
+
+*/
+struct UpcomingMatch {
+  var tournament: Tournament
+  var match: Match
+  var myTeam: Team
+  var otherTeam: Team
+
+  init?(json: JSON) {
+    guard
+        let _tournament = json["tournament"] as? JSON
+      , let _match = json["match"] as? JSON
+      , let _myTeam = json["myTeam"] as? JSON
+      , let _otherTeam = json["otherTeam"] as? JSON
+      , let tournament = Tournament(json: _tournament)
+      , let match = Match(json: _match)
+      , let myTeam = Team(json: _myTeam)
+      , let otherTeam = Team(json: _otherTeam)
+      else {
+        return nil
+    }
+    self.tournament = tournament
+    self.match = match
+    self.myTeam = myTeam
+    self.otherTeam = otherTeam
+  }
+
+}
+
+// {"id":1,"tour_id":1,"team1_id":1,"team2_id":2,"ip":"192.168.1.1/32","time":1456646400000,"score1":0,"score2":0,"round":1},
+
+struct Match {
+  var matchID: MatchID
+  var tournamentID: TournamentID
+  var team1ID: TeamID
+  var team2ID: TeamID
+  var ipAddress: String
+  var date: NSDate
+  var score1: Int
+  var score2: Int
+  var round: Int
+
+  init?(json: JSON) {
+    guard
+        let matchID = json["id"] as? Int
+      , let t_id = json["tour_id"] as? Int
+      , let team1_id = json["team1_id"] as? Int
+      , let team2_id = json["team2_id"] as? Int
+      , let ip = json["ip"] as? String
+      , let time = json["time"] as? NSTimeInterval
+      , let score1 = json["score1"] as? Int
+      , let score2 = json["score2"] as? Int
+      , let round = json["round"] as? Int
+      else {
+        return nil
+    }
+    self.matchID = matchID
+    self.tournamentID = t_id
+    self.team1ID = team1_id
+    self.team2ID = team2_id
+    self.ipAddress = ip
+    self.date = NSDate(timeIntervalSince1970: time)
+    self.score1 = score1
+    self.score2 = score2
+    self.round = round
   }
 }
