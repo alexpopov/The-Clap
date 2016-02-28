@@ -1,5 +1,16 @@
 @import models.Model.UserData
-@(user:UserData)
+@import models.Model.Tournament
+@import models.Model.Match
+@import models.Model.Team
+
+@(user: UserData, upcoming: (Tournament, Match, Team, Team))
 
 <title>@(user.fname)</title>
-  <h1>Dash</h1>
+<h1>Dashboard</h1>
+
+<h2>Upcoming Tournament</h2>
+<h3>@(upcoming._1.name)</h3>
+<body>Date: @(upcoming._1.date.toString)<br>Game: @(upcoming._1.game)<br>
+    Capacity: @(upcoming._1.cur)/@(upcoming._1.max)<br>
+    Against: @(upcoming._4.name)</body> <br>
+<a href="@routes.Application.details()">Details</a>

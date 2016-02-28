@@ -13,10 +13,11 @@ object DataFetcher extends NumBitDataLayer {
   val teamParser = int("t_id") ~ str("name") ~ str("tag") map { case a ~ b ~ c => Team(a, b, c) }
   val playerParser = int("p_id") ~ int("u_id") ~ str("nick") map { case a ~ b ~ c => Player(a, b, c) }
   val tournamentParser = int("t_id") ~ str("name") ~ str("game") ~ date("date") ~ int("cur_reg") ~ int("max_reg") ~ int("status") map {
-    case a ~ b ~ c ~ d ~ e ~ f ~ g => Tournament(a, b, c, d, e, f, g)
+    case a ~ b ~ c ~ d ~ e ~ f ~ g => Tournament(a, b, c, d.getTime / 1000, e, f, g)
   }
   val matchParser = int("m_id") ~ int("tour_id") ~ int("team1_id") ~ int("team2_id") ~ str("ip") ~ date("time") ~ int("score1") ~ int("score2") ~ int("round") map {
-    case a ~ b ~ c ~ d ~ e ~ f ~ g ~ h ~ i => Match(a, b, c, d, e, f, g, h, i)
+    //todo:fix this
+    case a ~ b ~ c ~ d ~ e ~ f ~ g ~ h ~ i => Match(a, b, c, d, e.dropRight(3), f.getTime / 1000, g, h, i)
   }
   val userParser = int("u_id") ~ str("fstname") ~ str("lstname") ~ str("email") ~ str("pw") map { case a ~ b ~ c ~ d ~ e => UserData(a, b, c, d, e) }
 
@@ -55,11 +56,11 @@ object DataFetcher extends NumBitDataLayer {
         val toReturn = filter match {
           case "-1" =>
             fetchAllTournaments.filter(tour => appearsIn.contains(tour.id)).filter(
-              tour => tour.date.getTime < System.currentTimeMillis())
+              tour => tour.date < System.currentTimeMillis())
           case "0" => fetchAllTournaments.filter(tour => !appearsIn.contains(tour.id)).filter(
-            tour => tour.date.getTime >= System.currentTimeMillis())
+            tour => tour.date >= System.currentTimeMillis())
           case "1" => fetchAllTournaments.filter(tour => appearsIn.contains(tour.id)).filter(
-            tour => tour.date.getTime >= System.currentTimeMillis())
+            tour => tour.date >= System.currentTimeMillis())
           case _ => fetchAllTournaments
         }
         toReturn
@@ -109,7 +110,7 @@ object DataFetcher extends NumBitDataLayer {
     val tournDetails = tournaments.flatMap(
       t_id => SQL(s"select * from tournament where tournament.t_id=$t_id").as(tournamentParser.*))
 
-    val nextTourn = tournDetails.filter(_.status != -1).sortBy(_.date.getTime - System.currentTimeMillis()).head
+    val nextTourn = tournDetails.filter(_.status != -1).sortBy(_.date - System.currentTimeMillis()).head
     val teamIds = SQL(s"select t.team_id from tournament_team t where tour_id=${nextTourn.id}").as(int("team_id").*)
     val matches = SQL(s"select * from matches where matches.tour_id = ${nextTourn.id}").as(matchParser.*)
 

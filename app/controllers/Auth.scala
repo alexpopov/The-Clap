@@ -1,9 +1,11 @@
 package controllers
 
+import java.security.MessageDigest
+
 import models.Model.UserData
 import play.api.data.Forms._
 import play.api.data._
-import play.api.mvc.Action
+import play.api.mvc.{Session, Action}
 
 /**
   * Created by alan on 27/02/16.
@@ -24,7 +26,7 @@ object Auth extends NumBitController {
     val filtered = allUsr.filter(udata => udata.email.equals(username))
     filtered match {
       case List() => None //empty fail
-      case List(x) => if (x.pw == password) Some(x) else None
+      case List(x) => if (x.pw == md5(password)) Some(x) else None
       case _ => None // unknown error
     }
   }
@@ -33,10 +35,18 @@ object Auth extends NumBitController {
     Ok(views.html.login(true))
   }
 
+  def md5(s: String) = {
+    MessageDigest.getInstance("MD5").digest(s.getBytes).map("%02x".format(_)).mkString
+  }
+
   def authenticate = Action { implicit request =>
     loginForm.bindFromRequest.fold(
       formWithErrors => BadRequest(views.html.login(false)),
-      user => Ok(views.html.index(check(user._1, user._2).get))
+      user => {
+        val usrData = check(user._1, user._2)
+        val authSession = Session(Map{"user" -> usrData.get.id.toString})
+        Redirect(routes.Application.index()).withSession(authSession)
+      }
     )
   }
 

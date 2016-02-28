@@ -1,0 +1,11 @@
+@import models.Model.Tournament
+@import models.Model.Match
+@import models.Model.Team
+@(upcoming: (Tournament, Match, Team, Team))
+
+<title>VS @upcoming._4.nick</title>
+
+<h1>Opponent: @upcoming._4.name</h1>
+<body>Round: @upcoming._2.round<br>
+    IP: @upcoming._2.ip<br>
+    Score: @upcoming._2.score1 - @upcoming._2.score2</body>

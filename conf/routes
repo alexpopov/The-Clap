@@ -6,9 +6,7 @@
 GET        /                                            controllers.Application.index()
 GET        /login                                       controllers.Auth.login
 POST       /login                                       controllers.Auth.authenticate
-
-
-
+GET        /details                                     controllers.Application.details()
 
 GET        /rest/teams                                  controllers.Rest.fetchTeams
 GET        /rest/tournament/:playerId/:filter           controllers.Rest.futureTournaments(playerId, filter)
