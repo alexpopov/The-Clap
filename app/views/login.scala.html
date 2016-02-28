@@ -1,0 +1,13 @@
+@(isGood: Boolean)
+
+<title>Please Login</title>
+<form>
+  @if(!isGood){
+    Email or password is invalid
+  }
+  Email:<br>
+  <input type="text" name="email"><br>
+  Password:<br>
+  <input type="password" name="password">
+
+</form>

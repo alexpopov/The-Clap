@@ -1,7 +1,5 @@
-@(message: String)
+@import models.Model.UserData
+@(user:UserData)
 
-@main("Welcome to Play") {
-
-    @play20.welcome(message)
-
-}
+<title>@(user.fname)</title>
+  <h1>Dash</h1>

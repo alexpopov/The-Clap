@@ -3,9 +3,8 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index
-GET     /test                       controllers.Application.dbTest
-
+GET     /                           controllers.Application.index()
+GET     /login                      controllers.Auth.login
 GET     /rest/teams/                controllers.Rest.fetchTeams
 
 # Map static resources from the /public folder to the /assets URL path

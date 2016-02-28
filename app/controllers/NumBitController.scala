@@ -1,6 +1,7 @@
 package controllers
 
 import play.api.db.DB
+import play.api.Play.current
 import play.api.mvc.Controller
 
 /**
@@ -8,4 +9,5 @@ import play.api.mvc.Controller
   */
 class NumBitController extends Controller {
   implicit val db = DB.getConnection("NumBits")
+
 }
