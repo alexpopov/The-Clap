@@ -1,13 +1,10 @@
 package controllers
 
-import anorm._
 import anorm.SqlParser._
-import play.api.Play.current
-import play.api.db._
+import anorm._
 import play.api.mvc._
 
-object Application extends Controller {
-  implicit val db = DB.getConnection("NumBits")
+object Application extends NumBitController {
 
   def index = Action {
     Ok(views.html.index("Your new application is ready."))
