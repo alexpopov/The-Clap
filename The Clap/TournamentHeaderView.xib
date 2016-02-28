@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TournamentHeaderView" customModule="The_Clap" customModuleProvider="target">
+            <connections>
+                <outlet property="capacityLabel" destination="4QB-fD-oGm" id="jCw-Gw-wtJ"/>
+                <outlet property="dateLabel" destination="MDX-iG-VDZ" id="CSY-9m-bBU"/>
+                <outlet property="gameLabel" destination="38A-HH-Qbg" id="pHw-ge-KoG"/>
+                <outlet property="titleLabel" destination="5KB-xj-UTb" id="gmN-Dh-ZiP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="335" height="253"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="420 Blaze It!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5KB-xj-UTb">
+                    <rect key="frame" x="89" y="24" width="155.5" height="33.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38A-HH-Qbg">
+                    <rect key="frame" x="143" y="57.5" width="48" height="24"/>
+                    <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oct Jan 13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDX-iG-VDZ">
+                    <rect key="frame" x="133" y="81.5" width="69" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="2/8 filled" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4QB-fD-oGm">
+                    <rect key="frame" x="139" y="98.5" width="57" height="130.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="FUG-rK-mCV" customClass="Divider" customModule="The_Clap" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="252" width="335" height="1"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="5KB-xj-UTb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="24" id="4ka-1n-cup"/>
+                <constraint firstAttribute="bottom" secondItem="FUG-rK-mCV" secondAttribute="bottom" id="8Me-zs-qpn"/>
+                <constraint firstAttribute="trailing" secondItem="FUG-rK-mCV" secondAttribute="trailing" id="9uk-my-2zC"/>
+                <constraint firstItem="38A-HH-Qbg" firstAttribute="top" secondItem="5KB-xj-UTb" secondAttribute="bottom" id="AZc-uV-3v5"/>
+                <constraint firstItem="5KB-xj-UTb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="G0j-G1-Z9s"/>
+                <constraint firstItem="MDX-iG-VDZ" firstAttribute="top" secondItem="38A-HH-Qbg" secondAttribute="bottom" id="StI-zg-pHU"/>
+                <constraint firstItem="FUG-rK-mCV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="XPS-eG-joX"/>
+                <constraint firstItem="MDX-iG-VDZ" firstAttribute="top" secondItem="5KB-xj-UTb" secondAttribute="bottom" constant="8" id="bVe-10-xam"/>
+                <constraint firstItem="MDX-iG-VDZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fgi-x2-LH3"/>
+                <constraint firstAttribute="bottom" secondItem="4QB-fD-oGm" secondAttribute="bottom" priority="750" constant="24" id="gLK-iF-7ZS"/>
+                <constraint firstItem="4QB-fD-oGm" firstAttribute="top" secondItem="MDX-iG-VDZ" secondAttribute="bottom" id="mBS-mk-kR7"/>
+                <constraint firstItem="4QB-fD-oGm" firstAttribute="centerX" secondItem="MDX-iG-VDZ" secondAttribute="centerX" id="wML-QS-Xsv"/>
+                <constraint firstItem="38A-HH-Qbg" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="waT-wl-Vvy"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="bVe-10-xam"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="262.5" y="210.5"/>
+        </view>
+    </objects>
+</document>

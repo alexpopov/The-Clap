@@ -26,16 +26,33 @@ class FindViewController: BaseViewController {
     }
   }
 
+  let filter: TournamentFilter
+
+  init(tournamentFilter: TournamentFilter) {
+    self.filter = tournamentFilter
+    super.init()
+  }
+
+  required init?(coder: NSCoder?) {
+    fatalError()
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
     // Do any additional setup after loading the view.
-    navigationItem.title = "Find Tournaments"
+    navigationItem.title = {
+      switch self.filter {
+      case .Future: return "Coming Up"
+      case .Open: return "Find Tournaments"
+      case .Past: return "Tournament History"
+      }
+    }()
     setupTableView() |> view.addSubview
     Manuscript.layout(tableView) { table in
       table.alignAllEdges(to: self.view)
     }
-    API.getTournaments(filter: .Open).onSuccess { self.tournaments = $0 }
+    API.getTournaments(filter: filter).onSuccess { self.tournaments = $0 }
   }
 
   override func didReceiveMemoryWarning() {
@@ -71,6 +88,9 @@ extension FindViewController: UITableViewDataSource, UITableViewDelegate {
 
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    let tournament = tournaments[indexPath.row]
+    let controller = TournamentDetailsController(tournament: tournament)
+    navigationController?.pushViewController(controller, animated: true)
   }
 
 }

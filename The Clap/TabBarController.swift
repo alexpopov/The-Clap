@@ -11,7 +11,7 @@ import Prelude
 
 class TabBarController: UITabBarController {
 
-  lazy var findViewController = FindViewController()
+  lazy var findViewController = FindViewController(tournamentFilter: TournamentFilter.Open)
   lazy var listViewController = ProfileViewController()
   lazy var settingsViewController = SettingsViewController()
 

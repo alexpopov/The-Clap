@@ -36,6 +36,10 @@
 		B09D0D471C82C5ED00ADB3BF /* Designable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D461C82C5ED00ADB3BF /* Designable.swift */; };
 		B09D0D491C82C5F800ADB3BF /* TournamentQuickView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B09D0D481C82C5F800ADB3BF /* TournamentQuickView.xib */; };
 		B09D0D4B1C82C66800ADB3BF /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D4A1C82C66800ADB3BF /* Divider.swift */; };
+		B09D0D4F1C83078100ADB3BF /* TournamentDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D4E1C83078100ADB3BF /* TournamentDetailsController.swift */; };
+		B09D0D511C8308ED00ADB3BF /* TournamentHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B09D0D501C8308ED00ADB3BF /* TournamentHeaderView.xib */; };
+		B09D0D531C830E4000ADB3BF /* TournamentHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D521C830E4000ADB3BF /* TournamentHeaderView.swift */; };
+		B09D0D551C83214F00ADB3BF /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D541C83214F00ADB3BF /* TeamView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +74,10 @@
 		B09D0D461C82C5ED00ADB3BF /* Designable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Designable.swift; sourceTree = "<group>"; };
 		B09D0D481C82C5F800ADB3BF /* TournamentQuickView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TournamentQuickView.xib; sourceTree = "<group>"; };
 		B09D0D4A1C82C66800ADB3BF /* Divider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
+		B09D0D4E1C83078100ADB3BF /* TournamentDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentDetailsController.swift; sourceTree = "<group>"; };
+		B09D0D501C8308ED00ADB3BF /* TournamentHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TournamentHeaderView.xib; sourceTree = "<group>"; };
+		B09D0D521C830E4000ADB3BF /* TournamentHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentHeaderView.swift; sourceTree = "<group>"; };
+		B09D0D541C83214F00ADB3BF /* TeamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +116,9 @@
 		B09D0D011C82661400ADB3BF /* The Clap */ = {
 			isa = PBXGroup;
 			children = (
+				B09D0D501C8308ED00ADB3BF /* TournamentHeaderView.xib */,
+				B09D0D541C83214F00ADB3BF /* TeamView.swift */,
+				B09D0D4E1C83078100ADB3BF /* TournamentDetailsController.swift */,
 				B09D0D441C82C5CE00ADB3BF /* TournamentQuickView.swift */,
 				B09D0D481C82C5F800ADB3BF /* TournamentQuickView.xib */,
 				B09D0D3E1C82B63C00ADB3BF /* API.swift */,
@@ -124,6 +135,7 @@
 				B09D0D2E1C8288F900ADB3BF /* FindViewController.swift */,
 				B09D0D301C8290B600ADB3BF /* ProfileViewController.swift */,
 				B09D0D321C82913600ADB3BF /* SettingsViewController.swift */,
+				B09D0D521C830E4000ADB3BF /* TournamentHeaderView.swift */,
 				B09D0D2A1C82878B00ADB3BF /* NavigationController.swift */,
 				B09D0D341C829D1E00ADB3BF /* TableView.swift */,
 				B09D0D0B1C82661400ADB3BF /* LaunchScreen.storyboard */,
@@ -211,6 +223,7 @@
 			files = (
 				B09D0D0D1C82661400ADB3BF /* LaunchScreen.storyboard in Resources */,
 				B09D0D491C82C5F800ADB3BF /* TournamentQuickView.xib in Resources */,
+				B09D0D511C8308ED00ADB3BF /* TournamentHeaderView.xib in Resources */,
 				B09D0D0A1C82661400ADB3BF /* Assets.xcassets in Resources */,
 				B09D0D081C82661400ADB3BF /* Main.storyboard in Resources */,
 			);
@@ -247,6 +260,7 @@
 				B09D0D411C82B94000ADB3BF /* AudioEngineRESTAPI.swift in Sources */,
 				B09D0D331C82913600ADB3BF /* SettingsViewController.swift in Sources */,
 				B09D0D3D1C82AF8300ADB3BF /* TournamentCell.swift in Sources */,
+				B09D0D4F1C83078100ADB3BF /* TournamentDetailsController.swift in Sources */,
 				B09D0D451C82C5CE00ADB3BF /* TournamentQuickView.swift in Sources */,
 				B09D0D351C829D1E00ADB3BF /* TableView.swift in Sources */,
 				B09D0D371C82AB0C00ADB3BF /* TournamentView.swift in Sources */,
@@ -256,7 +270,9 @@
 				B09D0D311C8290B600ADB3BF /* ProfileViewController.swift in Sources */,
 				B09D0D051C82661400ADB3BF /* ViewController.swift in Sources */,
 				B09D0D1A1C8269E900ADB3BF /* Manuscript.swift in Sources */,
+				B09D0D551C83214F00ADB3BF /* TeamView.swift in Sources */,
 				B09D0D031C82661400ADB3BF /* AppDelegate.swift in Sources */,
+				B09D0D531C830E4000ADB3BF /* TournamentHeaderView.swift in Sources */,
 				B09D0D2F1C8288F900ADB3BF /* FindViewController.swift in Sources */,
 				B09D0D2D1C8288D900ADB3BF /* BaseViewController.swift in Sources */,
 				B09D0D391C82AC1200ADB3BF /* BaseView.swift in Sources */,
