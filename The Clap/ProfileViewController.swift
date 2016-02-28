@@ -22,11 +22,10 @@ class ProfileViewController: BaseViewController {
     // Do any additional setup after loading the view.
     view.addSubview(quickView)
     Manuscript.layout(quickView) { view in
-//      view.make(.Leading, equalTo: self.view, s: .Leading)
-//      view.make(.Trailing, equalTo: self.view, s: .Trailing)
-//      view.make(.Top, equalTo: self.view, s: .Top)
       view.alignAllEdges(to: self.view)
     }
+
+    quickView.delegate = self
     
     navigationItem.title = "Your Tournaments"
   }
@@ -36,4 +35,24 @@ class ProfileViewController: BaseViewController {
     // Dispose of any resources that can be recreated.
   }
 
+}
+
+extension ProfileViewController: QuickViewDelegate {
+  func showMoreInfo() {
+
+  }
+
+  func showFuture() {
+    let controller = FindViewController(tournamentFilter: .Future)
+    navigationController?.pushViewController(controller, animated: true)
+  }
+
+  func showHistory() {
+    let controller = FindViewController(tournamentFilter: .Past)
+    navigationController?.pushViewController(controller, animated: true)
+  }
+
+  func shareIP() {
+
+  }
 }

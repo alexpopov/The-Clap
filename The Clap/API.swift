@@ -82,7 +82,7 @@ class Client {
   }
 
   func getTournaments(filter filter: TournamentFilter) -> Future<[Tournament], ClapError> {
-    let future = startRequest(.Tournaments(0, .Open))
+    let future = startRequest(.Tournaments(1, filter))
       .map { $0 as? [JSON] }
       .map { $0?.flatMap { Tournament(json: $0) } ?? [] }
     return future

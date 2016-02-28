@@ -8,7 +8,16 @@
 
 import UIKit
 
+protocol QuickViewDelegate: class {
+  func showMoreInfo()
+  func showHistory()
+  func showFuture()
+  func shareIP()
+}
+
 class TournamentQuickView: DesignableView {
+
+  weak var delegate: QuickViewDelegate?
 
   @IBOutlet var roundLabel: UILabel! {
     didSet {
@@ -48,8 +57,9 @@ class TournamentQuickView: DesignableView {
   }
 
   @IBAction func ipPressed(sender: UIButton) {
-
+    delegate?.shareIP()
   }
+
   @IBOutlet var historyButton: UIButton! {
     didSet {
       let string = NSAttributedString(string: "History", attributes:
@@ -82,13 +92,16 @@ class TournamentQuickView: DesignableView {
   }
 
   @IBAction func historyButtonPressed(sender: AnyObject) {
-
+    delegate?.showHistory()
   }
 
   @IBAction func futureButtonPressed(sender: AnyObject) {
-    
+    delegate?.showFuture()
   }
   
+  @IBAction func headerTapped(sender: UITapGestureRecognizer) {
+    delegate?.showMoreInfo()
+  }
 
 
 }
