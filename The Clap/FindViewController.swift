@@ -57,4 +57,8 @@ extension FindViewController: UITableViewDataSource, UITableViewDelegate {
     return TournamentCell.preferredHeight
   }
 
+  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    tableView.deselectRowAtIndexPath(indexPath, animated: true)
+  }
+
 }

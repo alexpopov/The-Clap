@@ -30,6 +30,8 @@
 		B09D0D391C82AC1200ADB3BF /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D381C82AC1200ADB3BF /* BaseView.swift */; };
 		B09D0D3B1C82AD4B00ADB3BF /* Bumblebee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B09D0D3A1C82AD4B00ADB3BF /* Bumblebee.framework */; };
 		B09D0D3D1C82AF8300ADB3BF /* TournamentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D3C1C82AF8300ADB3BF /* TournamentCell.swift */; };
+		B09D0D3F1C82B63C00ADB3BF /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D3E1C82B63C00ADB3BF /* API.swift */; };
+		B09D0D411C82B94000ADB3BF /* AudioEngineRESTAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D401C82B94000ADB3BF /* AudioEngineRESTAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		B09D0D381C82AC1200ADB3BF /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		B09D0D3A1C82AD4B00ADB3BF /* Bumblebee.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bumblebee.framework; path = Carthage/Build/iOS/Bumblebee.framework; sourceTree = "<group>"; };
 		B09D0D3C1C82AF8300ADB3BF /* TournamentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentCell.swift; sourceTree = "<group>"; };
+		B09D0D3E1C82B63C00ADB3BF /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		B09D0D401C82B94000ADB3BF /* AudioEngineRESTAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioEngineRESTAPI.swift; path = ../../../../../BitLit/BitLit/BitLit/AudioEngineRESTAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 		B09D0D011C82661400ADB3BF /* The Clap */ = {
 			isa = PBXGroup;
 			children = (
+				B09D0D3E1C82B63C00ADB3BF /* API.swift */,
 				B09D0D381C82AC1200ADB3BF /* BaseView.swift */,
 				B09D0D3C1C82AF8300ADB3BF /* TournamentCell.swift */,
 				B09D0D021C82661400ADB3BF /* AppDelegate.swift */,
@@ -114,6 +119,7 @@
 				B09D0D0B1C82661400ADB3BF /* LaunchScreen.storyboard */,
 				B09D0D171C8269E900ADB3BF /* LayoutProxy.swift */,
 				B09D0D181C8269E900ADB3BF /* Manuscript.swift */,
+				B09D0D401C82B94000ADB3BF /* AudioEngineRESTAPI.swift */,
 				B09D0D0E1C82661400ADB3BF /* Info.plist */,
 				B09D0D291C82804100ADB3BF /* Frameworks */,
 			);
@@ -225,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B09D0D411C82B94000ADB3BF /* AudioEngineRESTAPI.swift in Sources */,
 				B09D0D331C82913600ADB3BF /* SettingsViewController.swift in Sources */,
 				B09D0D3D1C82AF8300ADB3BF /* TournamentCell.swift in Sources */,
 				B09D0D351C829D1E00ADB3BF /* TableView.swift in Sources */,
@@ -239,6 +246,7 @@
 				B09D0D2D1C8288D900ADB3BF /* BaseViewController.swift in Sources */,
 				B09D0D391C82AC1200ADB3BF /* BaseView.swift in Sources */,
 				B09D0D2B1C82878B00ADB3BF /* NavigationController.swift in Sources */,
+				B09D0D3F1C82B63C00ADB3BF /* API.swift in Sources */,
 				B09D0D261C826EDA00ADB3BF /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

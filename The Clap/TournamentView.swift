@@ -15,9 +15,9 @@ class TournamentView: BaseView {
   let dateLabel = UILabel()
   let gameLabel = UILabel()
 
-  
 
-  static var preferredHeight: CGFloat = 80
+
+  static var preferredHeight: CGFloat = 56
 
   override func createUI() {
     super.createUI()
@@ -38,7 +38,7 @@ class TournamentView: BaseView {
     }
     Manuscript.layout(gameLabel) { label in
       label.make(.Leading, equalTo: self.nameLabel, s: .Leading)
-      label.make(.Top, equalTo: self.nameLabel, s: .Bottom)
+      label.make(.Bottom, equalTo: self, s: .Bottom, minus: margin)
     }
   }
 
