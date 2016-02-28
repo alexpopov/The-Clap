@@ -54,7 +54,7 @@ class TeamView: BaseView {
 
   func setupMembersLabel() -> UILabel {
     membersLabel.textColor = Colour.Black.color
-    membersLabel.font = UIFont.systemFontOfSize(22, weight: UIFontWeightMedium)
+    membersLabel.font = UIFont.systemFontOfSize(22, weight: UIFontWeightRegular)
     return membersLabel
   }
 

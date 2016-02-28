@@ -50,6 +50,27 @@ class TournamentQuickView: DesignableView {
   @IBAction func ipPressed(sender: UIButton) {
 
   }
+  @IBOutlet var historyButton: UIButton! {
+    didSet {
+      let string = NSAttributedString(string: "History", attributes:
+      [
+        NSFontAttributeName : UIFont.systemFontOfSize(15, weight: UIFontWeightMedium),
+        NSForegroundColorAttributeName : Colour.Blue.color
+        ])
+      historyButton.setAttributedTitle(string, forState: .Normal)
+    }
+  }
+  @IBOutlet var futureButton: UIButton! {
+    didSet {
+      let string = NSAttributedString(string: "Coming up", attributes:
+        [
+          NSFontAttributeName : UIFont.systemFontOfSize(15, weight: UIFontWeightMedium),
+          NSForegroundColorAttributeName : Colour.Blue.color
+        ])
+      futureButton.setAttributedTitle(string, forState: .Normal)
+    }
+  }
+
 
   func updateIP(ip: String) {
     let attributedString = NSAttributedString(string: ip, attributes:
@@ -59,6 +80,16 @@ class TournamentQuickView: DesignableView {
       ])
     ipButton.setAttributedTitle(attributedString, forState: .Normal)
   }
+
+  @IBAction func historyButtonPressed(sender: AnyObject) {
+
+  }
+
+  @IBAction func futureButtonPressed(sender: AnyObject) {
+    
+  }
+  
+
 
 }
 

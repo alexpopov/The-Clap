@@ -99,6 +99,18 @@ extension TournamentDetailsController: UITableViewDelegate, UITableViewDataSourc
     return 4
   }
 
+  func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    let view = UIView()
+    view.backgroundColor = Colour.LightBlue.color.colorWithAlphaComponent(0.1)
+    return view
+  }
+
+  func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    let view = UIView()
+    view.backgroundColor = Colour.LightBlue.color.colorWithAlphaComponent(0.1)
+    return view
+  }
+
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
     return TeamCell.preferredHeight
   }

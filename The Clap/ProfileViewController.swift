@@ -22,9 +22,10 @@ class ProfileViewController: BaseViewController {
     // Do any additional setup after loading the view.
     view.addSubview(quickView)
     Manuscript.layout(quickView) { view in
-      view.make(.Leading, equalTo: self.view, s: .Leading)
-      view.make(.Trailing, equalTo: self.view, s: .Trailing)
-      view.make(.Top, equalTo: self.view, s: .Top)
+//      view.make(.Leading, equalTo: self.view, s: .Leading)
+//      view.make(.Trailing, equalTo: self.view, s: .Trailing)
+//      view.make(.Top, equalTo: self.view, s: .Top)
+      view.alignAllEdges(to: self.view)
     }
     
     navigationItem.title = "Your Tournaments"
