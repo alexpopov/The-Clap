@@ -1,0 +1,39 @@
+//
+//  TableView.swift
+//  The Clap
+//
+//  Created by Alex Popov on 2016-02-27.
+//  Copyright © 2016 Numbits. All rights reserved.
+//
+
+import UIKit
+
+class TableView: UITableView {
+
+  init(style: UITableViewStyle) {
+    super.init(frame: CGRect.zero, style: style)
+    setup()
+  }
+
+  convenience init() {
+    self.init(style: .Plain)
+  }
+
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+
+  func setup() {
+    self.translatesAutoresizingMaskIntoConstraints = false
+    self.separatorInset = UIEdgeInsetsZero
+    self.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    self.backgroundColor = UIColor.whiteColor()
+    self.separatorStyle = .None
+    self.showsVerticalScrollIndicator = false
+    self.allowsSelection = true
+  }
+
+  
+
+
+}

@@ -1,0 +1,4 @@
+github "robrix/Prelude" "1.6.0"
+github "antitypical/Result" "1.0.2"
+github "yeahdongcn/UIColor-Hex-Swift" "1.9"
+github "Thomvis/BrightFutures" "v3.3.0"
