@@ -1,3 +1,4 @@
 github "Thomvis/BrightFutures"
 github "robrix/Prelude"
 github "yeahdongcn/UIColor-Hex-Swift" >= 1.9
+github "daltoniam/bumblebee"
