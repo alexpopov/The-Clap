@@ -43,8 +43,6 @@ class FindViewController: BaseViewController {
     super.viewDidLoad()
 
     // Do any additional setup after loading the view.
-
-
     navigationItem.title = {
       switch self.filter {
       case .Future: return "Coming Up"
@@ -58,7 +56,7 @@ class FindViewController: BaseViewController {
     }
     API.getTournaments(filter: filter)
       .onSuccess { self.tournaments = $0 }
-      .onComplete { _ in self.activityIndicator.stopAnimating() }
+      .onComplete { result in self.activityIndicator.stopAnimating(); print(result) }
 
     setupSpinner()
 
@@ -77,10 +75,10 @@ class FindViewController: BaseViewController {
     }
     alertController.addAction(UIAlertAction(title: "Okay", style: .Default, handler: { (action) -> Void in
       let ipTextField = alertController.textFields?.first
-      if let ipAddress = ipTextField?.text {
+      if let ipAddress = ipTextField?.text where ipAddress.isEmpty == false {
         Client.ipAddress = ipAddress
       }
-      if let userIDText = alertController.textFields?.last?.text, let newUserID = Int(userIDText) {
+      if let userIDText = alertController.textFields?.last?.text, let newUserID = Int(userIDText) where newUserID > 0 {
         Client.userID = newUserID
       }
     }))

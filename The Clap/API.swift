@@ -79,6 +79,7 @@ class Client {
 
   func getTeams() -> Future<[Team], ClapError> {
     let future = startRequest(.Teams)
+      .onComplete { "getTeams result: \($0)" }
       .map { $0 as? [JSON] }
       .map { $0?.flatMap { Team(json: $0) } ?? [] }
     return future
@@ -86,6 +87,7 @@ class Client {
 
   func getTournaments(filter filter: TournamentFilter) -> Future<[Tournament], ClapError> {
     let future = startRequest(.Tournaments(Client.userID, filter))
+      .onComplete { "getTournaments result: \($0)" }
       .map { $0 as? [JSON] }
       .map { $0?.flatMap { Tournament(json: $0) } ?? [] }
     return future
@@ -93,6 +95,7 @@ class Client {
 
   func getTournamentDetails(tournamentID: TournamentID) -> Future<TournamentDetails, ClapError> {
     let future = startRequest(.TournamentDetails(tournamentID))
+      .onComplete { "getTournamentDetails result: \($0)" }
       .map { $0 as? [JSON] ?? [] }
       .map { $0.flatMap { TournamentDetails(json: $0) } }
       .flatMap { (details: TournamentDetails?) -> Future<TournamentDetails, ClapError> in
@@ -106,6 +109,7 @@ class Client {
 
   func getUpcomingMatch() -> Future<UpcomingMatch, ClapError> {
     let future = startRequest(.UpcomingMatch(Client.userID))
+      .onComplete { "getUpcomingMatch result: \($0)" }
       .map { $0 as? JSON ?? JSON() }
       .map { UpcomingMatch(json: $0) }
       .flatMap { (match: UpcomingMatch?) -> Future<UpcomingMatch, ClapError> in
@@ -124,7 +128,10 @@ enum TournamentFilter: Int {
 }
 
 class APIRequest {
-  static var baseURL = "http://\(Client.ipAddress):9000/rest/"
+
+  static var baseURL: String {
+    return "http://\(Client.ipAddress):9000/rest/"
+  }
 
   enum Request {
     case Teams, Tournaments(UserID, TournamentFilter), TournamentDetails(TournamentID), UpcomingMatch(UserID)
