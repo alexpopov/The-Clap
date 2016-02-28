@@ -1,11 +1,9 @@
 package controllers
 
-import anorm.SqlParser._
-import anorm._
 import models.Model.UserData
 import play.api.data.Forms._
 import play.api.data._
-import play.api.mvc.{Action, Security}
+import play.api.mvc.Action
 
 /**
   * Created by alan on 27/02/16.
@@ -22,15 +20,13 @@ object Auth extends NumBitController {
   )
 
   def check(username: String, password: String): Option[UserData] = {
-    val userParser = int("u_id") ~ str("fstname") ~ str("lstname") ~ str("email") ~ str("pw") map { case a ~ b ~ c ~ d ~ e => UserData(a, b, c, d, e) }
-    val allUsr = SQL("select * from users").as(userParser.*)
+    val allUsr = DataFetcher.fetchAllUsers
     val filtered = allUsr.filter(udata => udata.email.equals(username))
     filtered match {
       case List() => None //empty fail
       case List(x) => if (x.pw == password) Some(x) else None
       case _ => None // unknown error
     }
-
   }
 
   def login = Action { implicit request =>

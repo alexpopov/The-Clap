@@ -2,9 +2,8 @@ package controllers
 
 import anorm.SqlParser._
 import anorm._
-import models.Model.{Match, Tournament, Player, Team}
+import models.Model._
 import models._
-import play.api.libs.json.{JsValue, Json}
 
 /**
   * Created by alan on 28/02/16.
@@ -19,8 +18,13 @@ object DataFetcher extends NumBitDataLayer {
   val matchParser = int("m_id") ~ int("tour_id") ~ int("team1_id") ~ int("team2_id") ~ str("ip") ~ date("time") ~ int("score1") ~ int("score2") ~ int("round") map {
     case a ~ b ~ c ~ d ~ e ~ f ~ g ~ h ~ i => Match(a, b, c, d, e, f, g, h, i)
   }
+  val userParser = int("u_id") ~ str("fstname") ~ str("lstname") ~ str("email") ~ str("pw") map { case a ~ b ~ c ~ d ~ e => UserData(a, b, c, d, e) }
 
-  def teamFetcher: List[Team] = {
+  def fetchAllUsers: List[UserData] = {
+    SQL("select * from users").as(userParser.*)
+  }
+
+  def fetchAllTeams: List[Team] = {
     SQL("select * from Teams").as(teamParser.*)
   }
 
