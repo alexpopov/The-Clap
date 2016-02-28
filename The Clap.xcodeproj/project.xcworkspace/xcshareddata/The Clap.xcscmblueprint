@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "CB51EC024FB6A2E5A47069BCF4C1723267D83254",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "CB51EC024FB6A2E5A47069BCF4C1723267D83254" : 0,
+    "076526EB74B0F50174A8FDD9C21832AC10A2CDB3" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C7DC5D00-39F7-4C95-A9C0-B8334A297A31",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "CB51EC024FB6A2E5A47069BCF4C1723267D83254" : "The%20Clap\/",
+    "076526EB74B0F50174A8FDD9C21832AC10A2CDB3" : "..\/..\/..\/BitLit"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "The Clap",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "The Clap.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "gitlab.bitlit.ca:book-recognition\/bitlit-ios-app.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "076526EB74B0F50174A8FDD9C21832AC10A2CDB3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:alexpopov\/The-Clap.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CB51EC024FB6A2E5A47069BCF4C1723267D83254"
+    }
+  ]
+}

@@ -11,9 +11,11 @@ import UIKit
 import HEXColor
 
 enum Colour: String {
-  case Blue = "#033261", White = "#FFFFFF", Yellow = "#ffe100", DarkBlue = "#002240"
+  case Blue = "#033261", White = "#FFFFFF", Yellow = "#ffe100", DarkBlue = "#002240", Black = "#333333", Grey = "#7D7D7D", LightBlue = "#129cfe"
 
   var color: UIColor {
     return UIColor(rgba: self.rawValue)
   }
 }
+
+let margin: CGFloat = 8

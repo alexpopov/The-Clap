@@ -26,7 +26,7 @@ class TableView: UITableView {
   func setup() {
     self.translatesAutoresizingMaskIntoConstraints = false
     self.separatorInset = UIEdgeInsetsZero
-    self.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    self.contentInset = UIEdgeInsetsZero
     self.backgroundColor = UIColor.whiteColor()
     self.separatorStyle = .None
     self.showsVerticalScrollIndicator = false
