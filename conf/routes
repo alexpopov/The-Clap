@@ -13,6 +13,8 @@ GET        /admin/addTournament                         controllers.Admin.addTou
 POST       /admin/addTournament                         controllers.Admin.saveTournament()
 GET        /admin/addTeam                               controllers.Admin.addTeam()
 POST       /admin/addTeam                               controllers.Admin.saveTeam()
+GET        /admin/addUser                               controllers.Admin.addUser()
+POST       /admin/addUser                               controllers.Admin.saveUser()
 
 GET        /rest/teams                                  controllers.Rest.fetchTeams
 GET        /rest/tournament/:playerId/:filter           controllers.Rest.futureTournaments(playerId, filter)

@@ -1,11 +1,9 @@
 package controllers
 
-import java.security.MessageDigest
-
 import models.Model.UserData
 import play.api.data.Forms._
 import play.api.data._
-import play.api.mvc.{Session, Action}
+import play.api.mvc.{Action, Session}
 
 /**
   * Created by alan on 27/02/16.
@@ -33,10 +31,6 @@ object Auth extends NumBitController {
 
   def login = Action { implicit request =>
     Ok(views.html.login(true))
-  }
-
-  def md5(s: String) = {
-    MessageDigest.getInstance("MD5").digest(s.getBytes).map("%02x".format(_)).mkString
   }
 
   def authenticate = Action { implicit request =>

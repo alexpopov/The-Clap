@@ -1,5 +1,7 @@
 package controllers
 
+import java.security.MessageDigest
+
 import models.Model.{Match, Player, Tournament, Team}
 import play.api.Play.current
 import play.api.db.DB
@@ -70,5 +72,9 @@ trait NumBitDataLayer {
       "myTeam" -> Json.toJson(coming._3),
       "otherTeam" -> Json.toJson(coming._4)
     )
+  }
+
+  def md5(s: String) = {
+    MessageDigest.getInstance("MD5").digest(s.getBytes).map("%02x".format(_)).mkString
   }
 }
