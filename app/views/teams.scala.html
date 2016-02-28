@@ -1,0 +1,9 @@
+@(teams: Seq[(Int, String)])
+
+<title>Team list</title>
+<h1>Teams</h1>
+<ul>
+    @teams.map { test =>
+        <li>@(test._2)</li>
+    }
+</ul>
