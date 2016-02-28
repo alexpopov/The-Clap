@@ -39,6 +39,7 @@
 		B09D0D4F1C83078100ADB3BF /* TournamentDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D4E1C83078100ADB3BF /* TournamentDetailsController.swift */; };
 		B09D0D511C8308ED00ADB3BF /* TournamentHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B09D0D501C8308ED00ADB3BF /* TournamentHeaderView.xib */; };
 		B09D0D531C830E4000ADB3BF /* TournamentHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D521C830E4000ADB3BF /* TournamentHeaderView.swift */; };
+		B09D0D551C83214F00ADB3BF /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D541C83214F00ADB3BF /* TeamView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		B09D0D4E1C83078100ADB3BF /* TournamentDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentDetailsController.swift; sourceTree = "<group>"; };
 		B09D0D501C8308ED00ADB3BF /* TournamentHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TournamentHeaderView.xib; sourceTree = "<group>"; };
 		B09D0D521C830E4000ADB3BF /* TournamentHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentHeaderView.swift; sourceTree = "<group>"; };
+		B09D0D541C83214F00ADB3BF /* TeamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				B09D0D501C8308ED00ADB3BF /* TournamentHeaderView.xib */,
+				B09D0D541C83214F00ADB3BF /* TeamView.swift */,
 				B09D0D4E1C83078100ADB3BF /* TournamentDetailsController.swift */,
 				B09D0D441C82C5CE00ADB3BF /* TournamentQuickView.swift */,
 				B09D0D481C82C5F800ADB3BF /* TournamentQuickView.xib */,
@@ -267,6 +270,7 @@
 				B09D0D311C8290B600ADB3BF /* ProfileViewController.swift in Sources */,
 				B09D0D051C82661400ADB3BF /* ViewController.swift in Sources */,
 				B09D0D1A1C8269E900ADB3BF /* Manuscript.swift in Sources */,
+				B09D0D551C83214F00ADB3BF /* TeamView.swift in Sources */,
 				B09D0D031C82661400ADB3BF /* AppDelegate.swift in Sources */,
 				B09D0D531C830E4000ADB3BF /* TournamentHeaderView.swift in Sources */,
 				B09D0D2F1C8288F900ADB3BF /* FindViewController.swift in Sources */,

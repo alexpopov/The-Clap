@@ -11,10 +11,16 @@ import UIKit
 class TournamentDetailsController: BaseViewController {
 
   let tournament: Tournament
-  var tournamentDetails: TournamentDetails?
+  var tournamentDetails: TournamentDetails? {
+    didSet {
+      tableView.reloadData()
+    }
+  }
   let headerView = TournamentHeaderView()
 
   let tableView = TableView(style: .Grouped)
+
+  let reuseIdentifier = "team cell"
 
   init(tournament: Tournament) {
     self.tournament = tournament
@@ -38,7 +44,8 @@ class TournamentDetailsController: BaseViewController {
     }
 
     headerView.updateWithTournament(tournament)
-    API.getTournamentDetails(tournament.tournamentID).onComplete { print($0) }
+    API.getTournamentDetails(tournament.tournamentID)
+      .onSuccess { self.tournamentDetails = $0 }
 
     setupTable()
   }
@@ -53,6 +60,7 @@ class TournamentDetailsController: BaseViewController {
     }
     tableView.delegate = self
     tableView.dataSource = self
+    tableView.registerClass(TeamCell.self, forCellReuseIdentifier: reuseIdentifier)
   }
 
 }
@@ -60,7 +68,12 @@ class TournamentDetailsController: BaseViewController {
 extension TournamentDetailsController: UITableViewDelegate, UITableViewDataSource {
 
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    fatalError()
+    let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! TeamCell
+    if let details = tournamentDetails {
+      let teamPlayers = details.teamPlayers[indexPath.section]
+      cell.subcell.updateWithTeam(teamPlayers.team, player: teamPlayers.players[indexPath.row])
+    }
+    return cell
   }
 
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -78,6 +91,16 @@ extension TournamentDetailsController: UITableViewDelegate, UITableViewDataSourc
     return details.teamPlayers.count
   }
 
-  
+  func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    return 4
+  }
+
+  func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    return 4
+  }
+
+  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    return TeamCell.preferredHeight
+  }
 
 }

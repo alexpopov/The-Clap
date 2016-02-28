@@ -219,12 +219,13 @@ struct Team {
 
   init?(json: JSON) {
     guard let teamID = json["id"] as? Int
-    , let name = json["name"] as? String else {
+      , let name = json["name"] as? String
+      , let nick = json["nick"] as? String else {
       return nil
     }
     self.teamID = teamID
     self.name = name
-    self.shortName = "CLG"
+    self.shortName = nick
   }
 }
 

@@ -25,7 +25,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38A-HH-Qbg">
-                    <rect key="frame" x="143.5" y="57.5" width="48" height="24"/>
+                    <rect key="frame" x="143" y="57.5" width="48" height="24"/>
                     <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
@@ -36,8 +36,8 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2/8 filled" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4QB-fD-oGm">
-                    <rect key="frame" x="139" y="98.5" width="57" height="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="2/8 filled" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4QB-fD-oGm">
+                    <rect key="frame" x="139" y="98.5" width="57" height="130.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
@@ -58,7 +58,7 @@
                 <constraint firstItem="FUG-rK-mCV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="XPS-eG-joX"/>
                 <constraint firstItem="MDX-iG-VDZ" firstAttribute="top" secondItem="5KB-xj-UTb" secondAttribute="bottom" constant="8" id="bVe-10-xam"/>
                 <constraint firstItem="MDX-iG-VDZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fgi-x2-LH3"/>
-                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4QB-fD-oGm" secondAttribute="bottom" constant="24" id="gLK-iF-7ZS"/>
+                <constraint firstAttribute="bottom" secondItem="4QB-fD-oGm" secondAttribute="bottom" priority="750" constant="24" id="gLK-iF-7ZS"/>
                 <constraint firstItem="4QB-fD-oGm" firstAttribute="top" secondItem="MDX-iG-VDZ" secondAttribute="bottom" id="mBS-mk-kR7"/>
                 <constraint firstItem="4QB-fD-oGm" firstAttribute="centerX" secondItem="MDX-iG-VDZ" secondAttribute="centerX" id="wML-QS-Xsv"/>
                 <constraint firstItem="38A-HH-Qbg" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="waT-wl-Vvy"/>
