@@ -11,12 +11,12 @@ import Prelude
 
 class TabBarController: UITabBarController {
 
-  lazy var findViewController = UIViewController()
-  lazy var listViewController = UIViewController()
-  lazy var settingsViewController = UIViewController()
+  lazy var findViewController = FindViewController()
+  lazy var listViewController = ProfileViewController()
+  lazy var settingsViewController = SettingsViewController()
 
   enum Tabs: Int {
-    case Find, List, Settings
+    case Find, List
 
     static var allCases: [Tabs] {
       var i = 0
@@ -32,8 +32,24 @@ class TabBarController: UITabBarController {
       switch self {
       case .Find: return "Find"
       case .List: return "List"
-      case .Settings: return "Settings"
+//      case .Settings: return "Settings"
       }
+    }
+
+    private var imageString: String {
+      switch self {
+      case .Find: return "discover"
+      case .List: return "profile"
+//      case .Settings: return "settings"
+      }
+    }
+
+    var image: UIImage? {
+      return UIImage(named: imageString)?.imageWithRenderingMode(.AlwaysOriginal)
+    }
+
+    var selectedImage: UIImage? {
+      return UIImage(named: imageString + "-sel")?.imageWithRenderingMode(.AlwaysOriginal)
     }
   }
 
@@ -45,12 +61,15 @@ class TabBarController: UITabBarController {
       let viewController = self.viewControllerForTab(tab)
       let navController = NavigationController(rootViewController: viewController)
       navController.tabBarItem.title = tab.name
-      viewController.view.backgroundColor = Colour.Blue.color
+      viewController.view.backgroundColor = Colour.White.color
+      let tabBarItem = UITabBarItem(title: nil, image: tab.image, selectedImage: tab.selectedImage)
+      navController.tabBarItem = tabBarItem
       return navController
     }
     tabBar.translucent = false
     tabBar.tintColor = Colour.White.color
-    tabBar.backgroundImage = UIImage(named: "tabbar")
+//    tabBar.backgroundImage = UIImage(named: "tabbar")
+    tabBar.barTintColor = Colour.Blue.color
     tabBar.shadowImage = UIImage()
     tabBar.clipsToBounds = true
   }
@@ -61,7 +80,7 @@ class TabBarController: UITabBarController {
       return findViewController
     case .List:
       return listViewController
-    case .Settings:
+//    case .Settings:
       return settingsViewController
     }
   }

@@ -109,9 +109,26 @@ SWIFT_CLASS("_TtC8The_Clap11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UIViewController;
-@class NSBundle;
 @class NSCoder;
+
+SWIFT_CLASS("_TtC8The_Clap18BaseViewController")
+@interface BaseViewController : UIViewController
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+@end
+
+
+SWIFT_CLASS("_TtC8The_Clap18FindViewController")
+@interface FindViewController : BaseViewController
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSBundle;
 
 SWIFT_CLASS("_TtC8The_Clap20NavigationController")
 @interface NavigationController : UINavigationController
@@ -124,11 +141,29 @@ SWIFT_CLASS("_TtC8The_Clap20NavigationController")
 @end
 
 
+SWIFT_CLASS("_TtC8The_Clap21ProfileViewController")
+@interface ProfileViewController : BaseViewController
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8The_Clap22SettingsViewController")
+@interface SettingsViewController : BaseViewController
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC8The_Clap16TabBarController")
 @interface TabBarController : UITabBarController
-@property (nonatomic, strong) UIViewController * __nonnull findViewController;
-@property (nonatomic, strong) UIViewController * __nonnull listViewController;
-@property (nonatomic, strong) UIViewController * __nonnull settingsViewController;
+@property (nonatomic, strong) FindViewController * __nonnull findViewController;
+@property (nonatomic, strong) ProfileViewController * __nonnull listViewController;
+@property (nonatomic, strong) SettingsViewController * __nonnull settingsViewController;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;

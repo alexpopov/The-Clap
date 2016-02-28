@@ -21,6 +21,10 @@
 		B09D0D261C826EDA00ADB3BF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D251C826EDA00ADB3BF /* Constants.swift */; };
 		B09D0D281C82729B00ADB3BF /* HEXColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B09D0D271C82729B00ADB3BF /* HEXColor.framework */; };
 		B09D0D2B1C82878B00ADB3BF /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D2A1C82878B00ADB3BF /* NavigationController.swift */; };
+		B09D0D2D1C8288D900ADB3BF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D2C1C8288D900ADB3BF /* BaseViewController.swift */; };
+		B09D0D2F1C8288F900ADB3BF /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D2E1C8288F900ADB3BF /* FindViewController.swift */; };
+		B09D0D311C8290B600ADB3BF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D301C8290B600ADB3BF /* ProfileViewController.swift */; };
+		B09D0D331C82913600ADB3BF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D321C82913600ADB3BF /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		B09D0D251C826EDA00ADB3BF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B09D0D271C82729B00ADB3BF /* HEXColor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HEXColor.framework; path = Carthage/Build/iOS/HEXColor.framework; sourceTree = "<group>"; };
 		B09D0D2A1C82878B00ADB3BF /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		B09D0D2C1C8288D900ADB3BF /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B09D0D2E1C8288F900ADB3BF /* FindViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
+		B09D0D301C8290B600ADB3BF /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B09D0D321C82913600ADB3BF /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,10 @@
 				B09D0D041C82661400ADB3BF /* ViewController.swift */,
 				B09D0D061C82661400ADB3BF /* Main.storyboard */,
 				B09D0D091C82661400ADB3BF /* Assets.xcassets */,
+				B09D0D2C1C8288D900ADB3BF /* BaseViewController.swift */,
+				B09D0D2E1C8288F900ADB3BF /* FindViewController.swift */,
+				B09D0D301C8290B600ADB3BF /* ProfileViewController.swift */,
+				B09D0D321C82913600ADB3BF /* SettingsViewController.swift */,
 				B09D0D2A1C82878B00ADB3BF /* NavigationController.swift */,
 				B09D0D0B1C82661400ADB3BF /* LaunchScreen.storyboard */,
 				B09D0D171C8269E900ADB3BF /* LayoutProxy.swift */,
@@ -196,11 +208,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B09D0D331C82913600ADB3BF /* SettingsViewController.swift in Sources */,
 				B09D0D191C8269E900ADB3BF /* LayoutProxy.swift in Sources */,
 				B09D0D151C82685200ADB3BF /* TabBarController.swift in Sources */,
+				B09D0D311C8290B600ADB3BF /* ProfileViewController.swift in Sources */,
 				B09D0D051C82661400ADB3BF /* ViewController.swift in Sources */,
 				B09D0D1A1C8269E900ADB3BF /* Manuscript.swift in Sources */,
 				B09D0D031C82661400ADB3BF /* AppDelegate.swift in Sources */,
+				B09D0D2F1C8288F900ADB3BF /* FindViewController.swift in Sources */,
+				B09D0D2D1C8288D900ADB3BF /* BaseViewController.swift in Sources */,
 				B09D0D2B1C82878B00ADB3BF /* NavigationController.swift in Sources */,
 				B09D0D261C826EDA00ADB3BF /* Constants.swift in Sources */,
 			);

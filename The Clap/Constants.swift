@@ -11,7 +11,7 @@ import UIKit
 import HEXColor
 
 enum Colour: String {
-  case Blue = "#033261", White = "#FFFFFF", Yellow = "#ffe100", DarkBlue = ""
+  case Blue = "#033261", White = "#FFFFFF", Yellow = "#ffe100", DarkBlue = "#002240"
 
   var color: UIColor {
     return UIColor(rgba: self.rawValue)
