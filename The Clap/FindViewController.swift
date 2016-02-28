@@ -8,12 +8,23 @@
 
 import UIKit
 import Prelude
+import BrightFutures
 
 class FindViewController: BaseViewController {
 
   let tableView = TableView()
 
   let reuseIdentifier = "tournament cell"
+
+  var tournaments = [Tournament]() {
+    didSet {
+      let indexPaths = tournaments
+        .enumerate()
+        .map { $0.index }
+        .map { NSIndexPath(forRow: $0, inSection: 0) }
+      tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Top)
+    }
+  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -24,6 +35,7 @@ class FindViewController: BaseViewController {
     Manuscript.layout(tableView) { table in
       table.alignAllEdges(to: self.view)
     }
+    API.getTournaments(filter: .Open).onSuccess { self.tournaments = $0 }
   }
 
   override func didReceiveMemoryWarning() {
@@ -35,7 +47,6 @@ class FindViewController: BaseViewController {
     tableView.registerClass(TournamentCell.self, forCellReuseIdentifier: reuseIdentifier)
     tableView.delegate = self
     tableView.dataSource = self
-    tableView.separatorStyle = .SingleLine
     return tableView
   }
 
@@ -45,12 +56,13 @@ extension FindViewController: UITableViewDataSource, UITableViewDelegate {
 
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! TournamentCell
-
+    let tournament = tournaments[indexPath.row]
+    cell.subcell.updateWithTournament(tournament)
     return cell
   }
 
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 10
+    return tournaments.count
   }
 
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

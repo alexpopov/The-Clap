@@ -15,13 +15,16 @@ class TournamentView: BaseView {
   let dateLabel = UILabel()
   let gameLabel = UILabel()
 
-  static var preferredHeight: CGFloat = 56
+  let divider = Divider()
+
+  static var preferredHeight: CGFloat = 64
 
   override func createUI() {
     super.createUI()
     setupNameLabel() |> addSubview
     setupDateLabel() |> addSubview
     setupGameLabel() |> addSubview
+    divider |> addSubview
   }
 
   override func layoutUI() {
@@ -38,29 +41,38 @@ class TournamentView: BaseView {
       label.make(.Leading, equalTo: self.nameLabel, s: .Leading)
       label.make(.Bottom, equalTo: self, s: .Bottom, minus: margin)
     }
+    Manuscript.layout(divider) { divider in
+      divider.make(.Leading, equalTo: self.nameLabel, s: .Leading)
+      divider.make(.Trailing, equalTo: self, s: .Trailing)
+      divider.make(.Bottom, equalTo: self, s: .Bottom)
+    }
   }
 
   func setupNameLabel() -> UILabel {
-    nameLabel.font = UIFont.systemFontOfSize(18, weight: UIFontWeightRegular)
+    nameLabel.font = UIFont.systemFontOfSize(20, weight: UIFontWeightRegular)
     nameLabel.textColor = Colour.DarkBlue.color
-    nameLabel.text = "NA LCS"
     return nameLabel
   }
 
   func setupDateLabel() -> UILabel {
     dateLabel.font = UIFont.systemFontOfSize(12, weight: UIFontWeightRegular)
     dateLabel.textColor = Colour.Grey.color
-    dateLabel.text = "27/02/16"
     return dateLabel
   }
 
   func setupGameLabel() -> UILabel {
-    gameLabel.font = UIFont.systemFontOfSize(15, weight: UIFontWeightRegular)
+    gameLabel.font = UIFont.systemFontOfSize(16, weight: UIFontWeightRegular)
     gameLabel.textColor = Colour.Black.color
-    gameLabel.text = "League of Legends"
     return gameLabel
   }
 
+  func updateWithTournament(tournament: Tournament) {
+    nameLabel.text = tournament.name
+    gameLabel.text = tournament.game
+    let formatter = NSDateFormatter()
+    formatter.dateFormat = "dd/MM/YYYY"
+    dateLabel.text = formatter.stringFromDate(tournament.date)
+  }
 
 
 }

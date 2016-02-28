@@ -40,6 +40,9 @@ class TournamentQuickView: DesignableView {
   @IBOutlet var ipButton: UIButton! {
     didSet {
       updateIP("10.11.1.1")
+      ipButton.titleEdgeInsets = UIEdgeInsets(top: 4, left: 8, bottom: 4, right: 8)
+      ipButton.layer.borderColor = Colour.Blue.color.CGColor
+      ipButton.layer.borderWidth = 1.0
     }
   }
 

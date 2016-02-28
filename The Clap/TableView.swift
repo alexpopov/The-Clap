@@ -28,7 +28,7 @@ class TableView: UITableView {
     self.separatorInset = UIEdgeInsetsZero
     self.contentInset = UIEdgeInsetsZero
     self.backgroundColor = UIColor.whiteColor()
-//    self.separatorStyle = .None
+    self.separatorStyle = .None
     self.showsVerticalScrollIndicator = false
     self.allowsSelection = true
   }
