@@ -59,7 +59,7 @@ View to subclass if you don't want the hassle. Make sure to override nibName
 */
 class DesignableView: UIView, Designable {
   var nibName: String {
-    return NSStringFromClass(self.dynamicType).stringByReplacingOccurrencesOfString("BitLit.", withString: "")
+    return NSStringFromClass(self.dynamicType).stringByReplacingOccurrencesOfString("The_Clap.", withString: "")
   }
 
   init() {

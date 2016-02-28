@@ -31,7 +31,7 @@ class Divider: UIView {
   func createUI() {
     self.backgroundColor = UIColor.clearColor()
     self.opaque = false
-    divider.backgroundColor = Colour.Grey.color.colorWithAlphaComponent(0.2)
+    divider.backgroundColor = Colour.Blue.color.colorWithAlphaComponent(0.2)
     self.addSubview(divider)
   }
 

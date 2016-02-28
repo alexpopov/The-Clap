@@ -10,9 +10,7 @@ import UIKit
 
 class ProfileViewController: BaseViewController {
 
-  enum Section: Int {
-    case Current = 0, Future, Past
-  }
+  let quickView = TournamentQuickView()
 
   let tableView = TableView(style: .Grouped)
 
@@ -22,6 +20,13 @@ class ProfileViewController: BaseViewController {
     super.viewDidLoad()
 
     // Do any additional setup after loading the view.
+    view.addSubview(quickView)
+    Manuscript.layout(quickView) { view in
+      view.make(.Leading, equalTo: self.view, s: .Leading)
+      view.make(.Trailing, equalTo: self.view, s: .Trailing)
+      view.make(.Top, equalTo: self.view, s: .Top)
+    }
+    
     navigationItem.title = "Your Tournaments"
   }
 
@@ -29,41 +34,5 @@ class ProfileViewController: BaseViewController {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-
-  func setupTableView() -> TableView {
-    tableView.registerClass(TournamentCell.self, forCellReuseIdentifier: reuseIdentifier)
-    tableView.delegate = self
-    tableView.dataSource = self
-    tableView.separatorStyle = .SingleLine
-    return tableView
-  }
-
-
-}
-
-extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
-
-  func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    return 3
-  }
-
-  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! TournamentCell
-
-    return cell
-  }
-
-  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 10
-  }
-
-  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-    return TournamentCell.preferredHeight
-  }
-
-  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    tableView.deselectRowAtIndexPath(indexPath, animated: true)
-  }
-
 
 }
