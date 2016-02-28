@@ -23,6 +23,7 @@ class ProfileViewController: BaseViewController {
         return
       }
       quickView.updateWithUpcomingMatch(upcomingMatch)
+      navigationItem.title = upcomingMatch.tournament.name
     }
   }
 
@@ -40,7 +41,7 @@ class ProfileViewController: BaseViewController {
 
     quickView.delegate = self
     
-    navigationItem.title = "Your Tournaments"
+//    navigationItem.title = "Your Tournaments"
     API.getUpcomingMatch().onSuccess { self.upcomingMatch = $0 }
       .onComplete { _ in self.activityIndicator.stopAnimating() }
 
@@ -55,7 +56,7 @@ class ProfileViewController: BaseViewController {
 
 extension ProfileViewController: QuickViewDelegate {
   func showMoreInfo() {
-    
+
   }
 
   func showFuture() {
