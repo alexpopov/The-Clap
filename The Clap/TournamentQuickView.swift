@@ -103,6 +103,43 @@ class TournamentQuickView: DesignableView {
     delegate?.showMoreInfo()
   }
 
+  var timer: NSTimer?
+  var upcomingMatch: UpcomingMatch?
+
+  override func setupUI() {
+    super.setupUI()
+    timer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: "updateTime", userInfo: nil, repeats: true)
+  }
+
+  func updateWithUpcomingMatch(upcomingMatch: UpcomingMatch) {
+    self.upcomingMatch = upcomingMatch
+    updateIP(upcomingMatch.match.ipAddress)
+    teamLabel.text = upcomingMatch.otherTeam.name
+    updateTime()
+
+  }
+
+  func updateTime() {
+    guard let match = upcomingMatch else {
+      return
+    }
+    let matchTime = match.match.date
+    let timeDifference = matchTime.timeIntervalSinceNow
+    let hoursAway = Int(abs(floor(timeDifference / 60 / 60 / 60)))
+    let minutesAway = Int(abs(floor((timeDifference / 60) % 60)))
+    if hoursAway < 24 {
+      inLabel.text = "in"
+      timeLabel.text = "\(hoursAway):\(minutesAway)"
+    } else {
+      let formatter = NSDateFormatter()
+      formatter.dateFormat = "LLL d"
+      inLabel.text = "on"
+      timeLabel.text = formatter.stringFromDate(matchTime)
+    }
+    inLabel.text = "in"
+    timeLabel.text = "3:47"
+  }
+
 
 }
 

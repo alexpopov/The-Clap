@@ -16,10 +16,23 @@ class ProfileViewController: BaseViewController {
 
   let reuseIdentifier = "tournament cells"
 
+  var upcomingMatch: UpcomingMatch? {
+    didSet {
+      quickView.hidden = false
+      guard let upcomingMatch = upcomingMatch else {
+        return
+      }
+      quickView.updateWithUpcomingMatch(upcomingMatch)
+    }
+  }
+
+  let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
     // Do any additional setup after loading the view.
+    quickView.hidden = true
     view.addSubview(quickView)
     Manuscript.layout(quickView) { view in
       view.alignAllEdges(to: self.view)
@@ -28,18 +41,21 @@ class ProfileViewController: BaseViewController {
     quickView.delegate = self
     
     navigationItem.title = "Your Tournaments"
-  }
+    API.getUpcomingMatch().onSuccess { self.upcomingMatch = $0 }
+      .onComplete { _ in self.activityIndicator.stopAnimating() }
 
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+
+    activityIndicator.hidesWhenStopped = true
+    activityIndicator.startAnimating()
+    view.addSubview(activityIndicator)
+    Manuscript.layout(activityIndicator) { $0.centerIn(self.view) }
   }
 
 }
 
 extension ProfileViewController: QuickViewDelegate {
   func showMoreInfo() {
-
+    
   }
 
   func showFuture() {
@@ -53,6 +69,11 @@ extension ProfileViewController: QuickViewDelegate {
   }
 
   func shareIP() {
-
+    guard let upcomingMatch = upcomingMatch else {
+      return
+    }
+    let ipAddress = upcomingMatch.match.ipAddress
+    ShareBear(viewController: self).shareText(ipAddress, andOther: nil)
+    UIPasteboard.generalPasteboard().string = ipAddress
   }
 }

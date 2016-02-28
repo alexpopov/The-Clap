@@ -40,6 +40,7 @@
 		B09D0D511C8308ED00ADB3BF /* TournamentHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B09D0D501C8308ED00ADB3BF /* TournamentHeaderView.xib */; };
 		B09D0D531C830E4000ADB3BF /* TournamentHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D521C830E4000ADB3BF /* TournamentHeaderView.swift */; };
 		B09D0D551C83214F00ADB3BF /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D541C83214F00ADB3BF /* TeamView.swift */; };
+		B09D0D571C8341C000ADB3BF /* ShareBear.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09D0D561C8341C000ADB3BF /* ShareBear.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		B09D0D501C8308ED00ADB3BF /* TournamentHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TournamentHeaderView.xib; sourceTree = "<group>"; };
 		B09D0D521C830E4000ADB3BF /* TournamentHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentHeaderView.swift; sourceTree = "<group>"; };
 		B09D0D541C83214F00ADB3BF /* TeamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
+		B09D0D561C8341C000ADB3BF /* ShareBear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareBear.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				B09D0D401C82B94000ADB3BF /* AudioEngineRESTAPI.swift */,
 				B09D0D461C82C5ED00ADB3BF /* Designable.swift */,
 				B09D0D4A1C82C66800ADB3BF /* Divider.swift */,
+				B09D0D561C8341C000ADB3BF /* ShareBear.swift */,
 				B09D0D0E1C82661400ADB3BF /* Info.plist */,
 				B09D0D291C82804100ADB3BF /* Frameworks */,
 			);
@@ -280,6 +283,7 @@
 				B09D0D471C82C5ED00ADB3BF /* Designable.swift in Sources */,
 				B09D0D3F1C82B63C00ADB3BF /* API.swift in Sources */,
 				B09D0D261C826EDA00ADB3BF /* Constants.swift in Sources */,
+				B09D0D571C8341C000ADB3BF /* ShareBear.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

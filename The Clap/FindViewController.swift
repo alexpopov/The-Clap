@@ -37,10 +37,14 @@ class FindViewController: BaseViewController {
     fatalError()
   }
 
+  let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
     // Do any additional setup after loading the view.
+
+
     navigationItem.title = {
       switch self.filter {
       case .Future: return "Coming Up"
@@ -52,7 +56,11 @@ class FindViewController: BaseViewController {
     Manuscript.layout(tableView) { table in
       table.alignAllEdges(to: self.view)
     }
-    API.getTournaments(filter: filter).onSuccess { self.tournaments = $0 }
+    API.getTournaments(filter: filter)
+      .onSuccess { self.tournaments = $0 }
+      .onComplete { _ in self.activityIndicator.stopAnimating() }
+
+    setupSpinner()
   }
 
   override func didReceiveMemoryWarning() {
@@ -65,6 +73,13 @@ class FindViewController: BaseViewController {
     tableView.delegate = self
     tableView.dataSource = self
     return tableView
+  }
+
+  func setupSpinner() {
+    view.addSubview(activityIndicator)
+    Manuscript.layout(activityIndicator) { $0.centerIn(self.view) }
+    activityIndicator.hidesWhenStopped = true
+    activityIndicator.startAnimating()
   }
 
 }
