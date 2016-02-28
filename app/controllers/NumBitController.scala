@@ -27,7 +27,8 @@ trait NumBitDataLayer {
       "id" -> tour.id,
       "name" -> tour.name,
       "game" -> tour.game,
-      "date" -> tour.date,
+      //todo: fix this too
+      "date" -> tour.date.getTime/1000,
       "current" -> tour.cur,
       "max" -> tour.max,
       "status" -> tour.status
