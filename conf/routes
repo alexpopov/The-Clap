@@ -6,9 +6,15 @@
 GET        /                                            controllers.Application.index()
 GET        /login                                       controllers.Auth.login
 POST       /login                                       controllers.Auth.authenticate
-
-
-
+GET        /logout                                      controllers.Auth.logout
+GET        /details                                     controllers.Application.details()
+GET        /admin                                       controllers.Admin.admin()
+GET        /admin/addTournament                         controllers.Admin.addTournament()
+POST       /admin/addTournament                         controllers.Admin.saveTournament()
+GET        /admin/addTeam                               controllers.Admin.addTeam()
+POST       /admin/addTeam                               controllers.Admin.saveTeam()
+GET        /admin/addUser                               controllers.Admin.addUser()
+POST       /admin/addUser                               controllers.Admin.saveUser()
 
 GET        /rest/teams                                  controllers.Rest.fetchTeams
 GET        /rest/tournament/:playerId/:filter           controllers.Rest.futureTournaments(playerId, filter)

@@ -3,7 +3,7 @@ package controllers
 import models.Model.UserData
 import play.api.data.Forms._
 import play.api.data._
-import play.api.mvc.Action
+import play.api.mvc.{Action, Session}
 
 /**
   * Created by alan on 27/02/16.
@@ -24,7 +24,7 @@ object Auth extends NumBitController {
     val filtered = allUsr.filter(udata => udata.email.equals(username))
     filtered match {
       case List() => None //empty fail
-      case List(x) => if (x.pw == password) Some(x) else None
+      case List(x) => if (x.pw == md5(password)) Some(x) else None
       case _ => None // unknown error
     }
   }
@@ -36,7 +36,17 @@ object Auth extends NumBitController {
   def authenticate = Action { implicit request =>
     loginForm.bindFromRequest.fold(
       formWithErrors => BadRequest(views.html.login(false)),
-      user => Ok(views.html.index(check(user._1, user._2).get))
+      user => {
+        val usrData = check(user._1, user._2).get
+        val authSession = Session(Map {
+          "user" -> usrData.id.toString
+        })
+        if (usrData.admin) {
+          Redirect(routes.Admin.admin()).withSession(authSession)
+        } else {
+          Redirect(routes.Application.index()).withSession(authSession)
+        }
+      }
     )
   }
 
