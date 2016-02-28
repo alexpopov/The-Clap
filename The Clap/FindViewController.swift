@@ -28,6 +28,8 @@ class FindViewController: BaseViewController {
 
   let filter: TournamentFilter
 
+  let emptyStateLabel = UILabel()
+
   init(tournamentFilter: TournamentFilter) {
     self.filter = tournamentFilter
     super.init()
@@ -56,13 +58,43 @@ class FindViewController: BaseViewController {
     }
     API.getTournaments(filter: filter)
       .onSuccess { self.tournaments = $0 }
-      .onComplete { result in self.activityIndicator.stopAnimating(); print(result) }
+      .onComplete { result in
+        self.activityIndicator.stopAnimating()
+        if result.value == nil {
+          self.emptyStateLabel.hidden = false
+          self.emptyStateLabel.text = "Oops :("
+        } else if result.value?.isEmpty == true {
+          self.emptyStateLabel.hidden = false
+        }
+    }
 
     setupSpinner()
 
     let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tripleTapped")
     tapGestureRecognizer.numberOfTapsRequired = 3
     navigationController?.navigationBar.addGestureRecognizer(tapGestureRecognizer)
+
+    emptyStateLabel.text = {
+      switch self.filter {
+      case .Future:
+        return "You need to join a tournament :)"
+      case .Open:
+        return "Check back soon for more tournaments!"
+      case .Past:
+        return "Gotta start somewhere!"
+      }
+    }()
+    emptyStateLabel.textColor = Colour.Grey.color
+    emptyStateLabel.font = UIFont.italicSystemFontOfSize(16)
+    emptyStateLabel.numberOfLines = 0
+    view.addSubview(emptyStateLabel)
+    emptyStateLabel.hidden = true
+    emptyStateLabel.textAlignment = .Center
+    Manuscript.layout(emptyStateLabel) { label in
+      label.make(.Top, equalTo: self.view, s: .Top, plus: 3 * margin)
+      label.make(.Width, equalTo: self.view, s: .Width, minus: 4 * margin)
+      label.make(.CenterX, equalTo: self.view, s: .CenterX)
+    }
   }
 
   func tripleTapped() {
