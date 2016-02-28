@@ -17,7 +17,7 @@ object DataFetcher extends NumBitDataLayer {
   }
   val matchParser = int("m_id") ~ int("tour_id") ~ int("team1_id") ~ int("team2_id") ~ str("ip") ~ date("time") ~ int("score1") ~ int("score2") ~ int("round") map {
     //todo:fix this
-    case a ~ b ~ c ~ d ~ e ~ f ~ g ~ h ~ i => Match(a, b, c, d, e.dropRight(3), f.getTime / 1000, g, h, i)
+    case a ~ b ~ c ~ d ~ e ~ f ~ g ~ h ~ i => Match(a, b, c, d, e, f.getTime / 1000, g, h, i)
   }
   val userParser = int("u_id") ~ str("fstname") ~ str("lstname") ~ str("email") ~ str("pw") ~ bool("admin") map { case a ~ b ~ c ~ d ~ e ~ f => UserData(a, b, c, d, e, f) }
 
@@ -61,11 +61,11 @@ object DataFetcher extends NumBitDataLayer {
         val toReturn = filter match {
           case "-1" =>
             fetchAllTournaments.filter(tour => appearsIn.contains(tour.id)).filter(
-              tour => tour.date < System.currentTimeMillis()/1000)
+              tour => tour.date < System.currentTimeMillis() / 1000)
           case "0" => fetchAllTournaments.filter(tour => !appearsIn.contains(tour.id)).filter(
-            tour => tour.date >= System.currentTimeMillis()/1000)
+            tour => tour.date >= System.currentTimeMillis() / 1000)
           case "1" => fetchAllTournaments.filter(tour => appearsIn.contains(tour.id)).filter(
-            tour => tour.date >= System.currentTimeMillis()/1000)
+            tour => tour.date >= System.currentTimeMillis() / 1000)
           case _ => fetchAllTournaments
         }
         toReturn
