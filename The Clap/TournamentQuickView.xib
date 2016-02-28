@@ -33,8 +33,8 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Solomid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMY-bh-g8O">
-                    <rect key="frame" x="85" y="75" width="151.5" height="29"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <rect key="frame" x="72" y="71" width="176" height="33.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -50,7 +50,7 @@
                     <color key="textColor" red="0.49803921569999998" green="0.49803921569999998" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eim-fC-zEy">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eim-fC-zEy" customClass="RoundedButton" customModule="The_Clap" customModuleProvider="target">
                     <rect key="frame" x="134" y="251.5" width="53" height="30"/>
                     <state key="normal" title="10.11.1.1"/>
                     <connections>
@@ -61,31 +61,24 @@
                     <rect key="frame" x="16" y="559" width="288" height="1"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
-                <view contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="sd1-1l-70v" userLabel="Top Divider" customClass="Divider" customModule="The_Clap" customModuleProvider="target">
-                    <rect key="frame" x="16" y="242" width="288" height="1"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="pDF-er-MSX" secondAttribute="bottom" id="3Bk-n2-OHK"/>
-                <constraint firstItem="Eim-fC-zEy" firstAttribute="top" secondItem="sd1-1l-70v" secondAttribute="bottom" constant="8" id="3Id-Pf-r8x"/>
                 <constraint firstItem="LMY-bh-g8O" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="6a8-9q-F10"/>
                 <constraint firstItem="Eim-fC-zEy" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="7eK-Bc-Cka"/>
-                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Eim-fC-zEy" secondAttribute="bottom" constant="8" id="EhB-Gb-XCI"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Eim-fC-zEy" secondAttribute="bottom" constant="16" id="EhB-Gb-XCI"/>
                 <constraint firstItem="yRf-8u-svw" firstAttribute="top" secondItem="FDe-9x-8Ro" secondAttribute="bottom" constant="-8" id="FAs-U6-yU5"/>
                 <constraint firstItem="FDe-9x-8Ro" firstAttribute="top" secondItem="LMY-bh-g8O" secondAttribute="bottom" constant="4" id="Qqr-cG-5in"/>
                 <constraint firstItem="FDe-9x-8Ro" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="RRi-k4-Ubr"/>
                 <constraint firstItem="tJx-eb-m9u" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="STr-j9-Ma4"/>
-                <constraint firstItem="sd1-1l-70v" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="TBj-SN-c7g"/>
                 <constraint firstItem="tJx-eb-m9u" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="VuE-HM-uaW"/>
                 <constraint firstItem="Eim-fC-zEy" firstAttribute="top" secondItem="yRf-8u-svw" secondAttribute="bottom" constant="16" id="WfR-xA-2Fc"/>
                 <constraint firstAttribute="trailing" secondItem="pDF-er-MSX" secondAttribute="trailing" constant="16" id="aHs-Ra-oEw"/>
-                <constraint firstItem="LMY-bh-g8O" firstAttribute="top" secondItem="OYJ-cZ-Hqu" secondAttribute="bottom" constant="8" id="cJe-uL-ywD"/>
+                <constraint firstItem="LMY-bh-g8O" firstAttribute="top" secondItem="OYJ-cZ-Hqu" secondAttribute="bottom" constant="4" id="cJe-uL-ywD"/>
                 <constraint firstItem="OYJ-cZ-Hqu" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jCu-G3-wOv"/>
                 <constraint firstItem="OYJ-cZ-Hqu" firstAttribute="top" secondItem="tJx-eb-m9u" secondAttribute="bottom" constant="4" id="mCT-3p-360"/>
                 <constraint firstItem="pDF-er-MSX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="qYO-Ie-4dF"/>
-                <constraint firstItem="sd1-1l-70v" firstAttribute="width" secondItem="pDF-er-MSX" secondAttribute="width" id="rLu-kE-VL2"/>
                 <constraint firstItem="yRf-8u-svw" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="uKP-S5-OdM"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
