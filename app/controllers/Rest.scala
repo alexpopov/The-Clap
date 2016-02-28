@@ -23,6 +23,4 @@ object Rest extends NumBitController {
   def matchInfo(uid: String) = Action {
     Ok(Json.toJson(DataFetcher.fetchMatchInfoForUser(uid)))
   }
-
-
 }

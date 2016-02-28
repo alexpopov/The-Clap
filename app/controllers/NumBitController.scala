@@ -55,8 +55,9 @@ trait NumBitDataLayer {
       "tour_id" -> mat.tour_id,
       "team1_id" -> mat.t1_id,
       "team2_id" -> mat.t2_id,
-      "ip" -> mat.ip,
-      "time" -> mat.time,
+      "ip" -> mat.ip.dropRight(3),
+      //todo: fix this
+      "time" -> mat.time.getTime/1000,
       "score1" -> mat.score1,
       "score2" -> mat.score2,
       "round" -> mat.round
