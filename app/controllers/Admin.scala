@@ -20,6 +20,12 @@ object Admin extends NumBitController {
     })
   )
 
+  val temaForm = Form(
+    tuple("name" -> text, "tag" -> text) verifying("Fields cannot be empty", result => result match {
+      case (name, tag) => !name.isEmpty && !tag.isEmpty && tag.length.equals(3)
+    })
+  )
+
   def admin() = Action { implicit request =>
     if (!request2session.isEmpty) {
       val userId = request2session.get("user").get
@@ -35,7 +41,8 @@ object Admin extends NumBitController {
 
   def saveTournament() = Action { implicit request =>
     tournForm.bindFromRequest.fold(
-      formWithErrors => BadRequest(views.html.admin(DataFetcher.fetchSingleUser(request2session.get("user").get).fname)),
+      formWithErrors =>
+        BadRequest(views.html.admin(DataFetcher.fetchSingleUser(request2session.get("user").get).fname, "!Field's cannot be empty, max must be greater than 1")),
       tournData => {
         SQL(s"insert into tournament(t_id, name, game, date, cur_reg, max_reg, status)" +
           s" values ({t_id}, {name}, {game}, {date}, {cur_reg}, {max_reg}, {status})").on(
@@ -51,4 +58,25 @@ object Admin extends NumBitController {
         Ok(views.html.admin(DataFetcher.fetchSingleUser(userId).fname, "Added tournament!"))
       })
   }
+
+  def addTeam() = Action {
+    Ok(views.html.addTeam())
+  }
+
+  def saveTeam() = Action { implicit request =>
+    temaForm.bindFromRequest.fold(
+      formWithErrors =>
+        BadRequest(views.html.admin(DataFetcher.fetchSingleUser(request2session.get("user").get).fname, "!Field's cannot be empty and tags must be of length 3")),
+      teamData => {
+        SQL(s"insert into teams(t_id, name, tag) values ({t_id}, {name}, {tag})").on(
+          't_id -> (DataFetcher.fetchAllTeams.sortBy(_.id).last.id + 1),
+          'name -> teamData._1,
+          'tag -> teamData._2).executeUpdate()
+        val userId = request2session.get("user").get
+        Ok(views.html.admin(DataFetcher.fetchSingleUser(userId).fname, "Added team!"))
+      }
+    )
+  }
+
+
 }

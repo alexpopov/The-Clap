@@ -11,6 +11,8 @@ GET        /details                                     controllers.Application.
 GET        /admin                                       controllers.Admin.admin()
 GET        /admin/addTournament                         controllers.Admin.addTournament()
 POST       /admin/addTournament                         controllers.Admin.saveTournament()
+GET        /admin/addTeam                               controllers.Admin.addTeam()
+POST       /admin/addTeam                               controllers.Admin.saveTeam()
 
 GET        /rest/teams                                  controllers.Rest.fetchTeams
 GET        /rest/tournament/:playerId/:filter           controllers.Rest.futureTournaments(playerId, filter)
