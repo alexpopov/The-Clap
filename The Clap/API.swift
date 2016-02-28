@@ -28,6 +28,9 @@ class Client {
 
   static var sharedClient = Client()
 
+  static var ipAddress = "10.19.219.190"
+  static var userID = 1
+
   private init() {
   }
 
@@ -82,7 +85,7 @@ class Client {
   }
 
   func getTournaments(filter filter: TournamentFilter) -> Future<[Tournament], ClapError> {
-    let future = startRequest(.Tournaments(userID, filter))
+    let future = startRequest(.Tournaments(Client.userID, filter))
       .map { $0 as? [JSON] }
       .map { $0?.flatMap { Tournament(json: $0) } ?? [] }
     return future
@@ -102,7 +105,7 @@ class Client {
   }
 
   func getUpcomingMatch() -> Future<UpcomingMatch, ClapError> {
-    let future = startRequest(.UpcomingMatch(userID))
+    let future = startRequest(.UpcomingMatch(Client.userID))
       .map { $0 as? JSON ?? JSON() }
       .map { UpcomingMatch(json: $0) }
       .flatMap { (match: UpcomingMatch?) -> Future<UpcomingMatch, ClapError> in
@@ -116,14 +119,12 @@ class Client {
   }
 }
 
-let userID = 1
-
 enum TournamentFilter: Int {
   case Past = -1, Open = 0, Future = 1
 }
 
 class APIRequest {
-  static var baseURL = "http://10.19.219.190:9000/rest/"
+  static var baseURL = "http://\(Client.ipAddress):9000/rest/"
 
   enum Request {
     case Teams, Tournaments(UserID, TournamentFilter), TournamentDetails(TournamentID), UpcomingMatch(UserID)

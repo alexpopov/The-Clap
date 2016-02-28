@@ -61,6 +61,30 @@ class FindViewController: BaseViewController {
       .onComplete { _ in self.activityIndicator.stopAnimating() }
 
     setupSpinner()
+
+    let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tripleTapped")
+    tapGestureRecognizer.numberOfTapsRequired = 3
+    navigationController?.navigationBar.addGestureRecognizer(tapGestureRecognizer)
+  }
+
+  func tripleTapped() {
+    let alertController = UIAlertController(title: "DEBUG MAGIC", message: nil, preferredStyle: .Alert)
+    alertController.addTextFieldWithConfigurationHandler { (textField) -> Void in
+      textField.placeholder = "IP Address"
+    }
+    alertController.addTextFieldWithConfigurationHandler { (textField) -> Void in
+      textField.placeholder = "User ID"
+    }
+    alertController.addAction(UIAlertAction(title: "Okay", style: .Default, handler: { (action) -> Void in
+      let ipTextField = alertController.textFields?.first
+      if let ipAddress = ipTextField?.text {
+        Client.ipAddress = ipAddress
+      }
+      if let userIDText = alertController.textFields?.last?.text, let newUserID = Int(userIDText) {
+        Client.userID = newUserID
+      }
+    }))
+    presentViewController(alertController, animated: true, completion: nil)
   }
 
   override func didReceiveMemoryWarning() {
