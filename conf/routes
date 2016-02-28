@@ -3,12 +3,12 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index
-GET     /test                       controllers.Application.dbTest
-
-GET     /rest/teams/                controllers.Rest.teams
+GET        /                                   controllers.Application.index()
+GET        /login                              controllers.Auth.login
+GET        /rest/teams/                        controllers.Rest.fetchTeams
+GET        /rest/tournament/:id/:filter        controllers.Rest.futureTournaments(id, filter)
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET        /assets/*file                       controllers.Assets.at(path="/public", file)
 
     

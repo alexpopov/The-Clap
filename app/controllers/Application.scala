@@ -1,22 +1,16 @@
 package controllers
 
-import anorm._
-import anorm.SqlParser._
-import play.api.Play.current
-import play.api.db._
+import models.Model.UserData
 import play.api.mvc._
 
-object Application extends Controller {
-  implicit val db = DB.getConnection("NumBits")
+object Application extends NumBitController {
 
-  def index = Action {
-    Ok(views.html.index("Your new application is ready."))
-  }
-
-  def dbTest = Action {
-    val rowParser = int("t_id") ~ str("name") map { case n ~ p => (n, p) }
-    val x = SQL("select * from Teams").as(rowParser.*)
-    Ok(views.html.teams(x))
+  def index(user: Option[UserData] = None) = Action {
+    if (user.isDefined) {
+      Ok(views.html.index(user.get))
+    } else {
+      Redirect("/login")
+    }
   }
 
 }

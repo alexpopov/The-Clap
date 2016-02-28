@@ -8,6 +8,8 @@ scalaVersion := "2.11.7"
 
 libraryDependencies ++= Seq(jdbc, cache, ws, specs2 % Test)
 
+libraryDependencies += "org.json4s" % "json4s-native_2.11" % "3.3.0"
+
 libraryDependencies += "postgresql" % "postgresql" % "9.1-901-1.jdbc4"
 
 libraryDependencies += "com.typesafe.play" %% "anorm" % "2.4.0"
