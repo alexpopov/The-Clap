@@ -8,6 +8,9 @@ GET        /login                                       controllers.Auth.login
 POST       /login                                       controllers.Auth.authenticate
 GET        /logout                                      controllers.Auth.logout
 GET        /details                                     controllers.Application.details()
+GET        /admin                                       controllers.Admin.admin()
+GET        /admin/addTournament                         controllers.Admin.addTournament()
+POST       /admin/addTournament                         controllers.Admin.saveTournament()
 
 GET        /rest/teams                                  controllers.Rest.fetchTeams
 GET        /rest/tournament/:playerId/:filter           controllers.Rest.futureTournaments(playerId, filter)

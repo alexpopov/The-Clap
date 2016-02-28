@@ -19,10 +19,15 @@ object DataFetcher extends NumBitDataLayer {
     //todo:fix this
     case a ~ b ~ c ~ d ~ e ~ f ~ g ~ h ~ i => Match(a, b, c, d, e.dropRight(3), f.getTime / 1000, g, h, i)
   }
-  val userParser = int("u_id") ~ str("fstname") ~ str("lstname") ~ str("email") ~ str("pw") map { case a ~ b ~ c ~ d ~ e => UserData(a, b, c, d, e) }
+  val userParser = int("u_id") ~ str("fstname") ~ str("lstname") ~ str("email") ~ str("pw") ~ bool("admin") map { case a ~ b ~ c ~ d ~ e ~ f => UserData(a, b, c, d, e, f) }
 
   def fetchAllUsers: List[UserData] = {
     SQL("select * from users").as(userParser.*)
+  }
+
+  def fetchSingleUser(id: String): UserData = {
+    val allUsers = fetchAllUsers
+    allUsers.filter(_.id.toString == id).head
   }
 
   def fetchAllTeams: List[Team] = {

@@ -7,7 +7,7 @@ import java.util.Date
   */
 object Model {
 
-  case class UserData(id: Int, fname: String, lname: String, email: String, pw: String)
+  case class UserData(id: Int, fname: String, lname: String, email: String, pw: String, admin: Boolean)
 
   case class Team(id: Int, name: String, nick: String)
 

@@ -43,9 +43,15 @@ object Auth extends NumBitController {
     loginForm.bindFromRequest.fold(
       formWithErrors => BadRequest(views.html.login(false)),
       user => {
-        val usrData = check(user._1, user._2)
-        val authSession = Session(Map{"user" -> usrData.get.id.toString})
-        Redirect(routes.Application.index()).withSession(authSession)
+        val usrData = check(user._1, user._2).get
+        val authSession = Session(Map {
+          "user" -> usrData.id.toString
+        })
+        if (usrData.admin) {
+          Redirect(routes.Admin.admin()).withSession(authSession)
+        } else {
+          Redirect(routes.Application.index()).withSession(authSession)
+        }
       }
     )
   }
