@@ -1,2 +1,17 @@
 # The-Clap
-Gotta catch it fast!
+
+The Clapp was born out of a deep love, and a deep frustration. Alan was the organizer for the Simon Fraser Gaming Commitee; as a naïve youth he just wanted to connect people and enjoy a nice weekend inside playing video games together — but all he found was logistical nightmares, frustrated friends, and a deep, burning desire to right these injustices.
+
+Clapp, the Competitive LAN App, is the answer to Alan's woes; developed with his long-time friend and colleague Alexei Alexeivich Popov the Second (most commonly referred to as Alex) — together they are NumBits. The two set out to build something that would answer the majority of LAN competitors' questions within no more than 2 taps on a screen. At the same time, Alan saw that despite its simplicity, the app should never put a ceiling on what a creative organizer could put together. The app was to walk a fine line between clarity for users, and power for admins and organizers.
+
+The back-end was designed by our two heroes in conjunction: Alan's extensive knowledge of Scala, Play and Postgres made rapid iteration easy, which allowed Alex to map out schemas that were flexible, highly normalized, and easy to work with both front- and back-end.
+
+The design of the app was to be nerd-friendly and light: Clapp's signature dark blue (nickname Flawed Azure) was a choice that took several hours of guesstimating hex colour-codes to discover, combining the dark themes of many a code-editor and the crisp contrast it provides on white. Elegant, large type in the San Francisco typeface is used widely in the app, with several derivatives of Flawed Azure being used to visually separate more important information.
+
+By now you might be wondering "why Flawed Azure?". Well, to be completely honest with you, dear Reader, it's because Azure is Flawed. The first hurdle Alan and Alex had to overcome was that of lacking documentation, external ports, internal ports, and other things that sound like they belong on submarines. The two put their heads together and wept, as help from Microsoft did not save the day. At our heroes' darkest moment, a light went on somewhere in the dark, and using a little ifconfig magic the two formed a connection between Clapp and Server, without using Azure at all.
+
+But the night was dark and full of terrors as each developer fought the demons of his respective platform. Swift's type-safety made working with JSON tedious and error-prone, but Alex pushed on. Through the fire and flames Alan carried Clapp, as conflagrations erupted on server cores with every new constraint and business requirement. And finally, seven hours after the setting of the sun, they reached the calm — the eye of the storm, if you will — wherein smooth sailing was restored, and the two young men, as if mad, broke out into fits of laughter over the conversations they heard around them. It was each developer for themselves, in that overly-lit room, and as sleep-deprivation-induced babel made its way through the campus #OH and #nwhacks2016 made their way through the interwebs.
+
+The two did not sleep; but neither did they see the sun rise. The last day of their journey together was dark and grey, and their agile fingers did not type quite as quickly as they once had. Cognitive load and sore necks took over. Alex briefly nodded off and face-desked, waking up several other people in the room. It was a trying time to the finish line, but one our protagonists faced with wisdom and preparedness; they had seen what nwHacks was capable of, and they were prepared to take it on.
+
+And it's through their friendship, and mutual dream of an easier way of organizing LAN Competitions, that the two are here today, to bring you Clapp.
