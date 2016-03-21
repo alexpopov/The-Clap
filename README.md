@@ -2,6 +2,8 @@
 
 The Clapp was born out of a deep love, and a deep frustration. Alan was the organizer for the Simon Fraser Gaming Commitee; as a naïve youth he just wanted to connect people and enjoy a nice weekend inside playing video games together — but all he found was logistical nightmares, frustrated friends, and a deep, burning desire to right these injustices.
 
+[![Demo.mp4](http://img.youtube.com/vi/CQuJB4G14uQ/0.jpg)](http://www.youtube.com/watch?v=CQuJB4G14uQ)
+
 Clapp, the Competitive LAN App, is the answer to Alan's woes; developed with his long-time friend and colleague Alexei Alexeivich Popov the Second (most commonly referred to as Alex) — together they are NumBits. The two set out to build something that would answer the majority of LAN competitors' questions within no more than 2 taps on a screen. At the same time, Alan saw that despite its simplicity, the app should never put a ceiling on what a creative organizer could put together. The app was to walk a fine line between clarity for users, and power for admins and organizers.
 
 The back-end was designed by our two heroes in conjunction: Alan's extensive knowledge of Scala, Play and Postgres made rapid iteration easy, which allowed Alex to map out schemas that were flexible, highly normalized, and easy to work with both front- and back-end.
